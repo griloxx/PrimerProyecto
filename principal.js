@@ -42,14 +42,20 @@ let words = [
   "gradas",
 ];
 
-// Selecciona la palabra aleatoria del array
-const palabraAleatoria = Math.floor(Math.random() * words.length);
-let palabra = words[palabraAleatoria];
-console.log(palabra);
+//función para  Seleccionar la palabra aleatoria del array
+function seleccionarPalabraAleatoria() {
+  const palabraAleatoria = Math.floor(Math.random() * (words.length + 1));
+  let palabra = words[palabraAleatoria];
+  return palabra;
+}
+let palabra2 = seleccionarPalabraAleatoria();
 
-//Crea los _ _ _ de la palabra seleccionada
-let guionesBajos = " _ ".repeat(palabra.length);
-console.log(guionesBajos);
+//función para crear los _ _ _ de la palabra seleccionada
+
+function generarGuion(palabra2) {
+  return " _ ".repeat(palabra2.length);
+}
+let guiones = generarGuion(palabra2);
 
 // Selecciono parrafo con querySelector
 const palabraSeleccionada = document.querySelector(".palabraAleatoria");
@@ -58,7 +64,7 @@ function añadirGuiones() {
   let botonStart = document.querySelector(".comenzar");
   botonStart.addEventListener("click", (event) => {
     event.preventDefault();
-    palabraSeleccionada.textContent = `La palabra secreta es: ( ${guionesBajos} )`;
+    palabraSeleccionada.textContent = `La palabra secreta es: ( ${guiones} )`;
   });
 }
 añadirGuiones();
