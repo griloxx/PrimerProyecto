@@ -1,24 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/intro.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/intro.css" />
     <title>El Ahorcado</title>
-</head>
-<body>
+  </head>
+  <body>
+    <!--Modificación Raquel-->
+    <header>
+      <h1>EL AHORCADO</h1>
+    </header>
+    <main>
+      <form id="inicio">
+        <fieldset>
+          <legend>Pulsa el botón para empezar a jugar</legend>
+          <button>Start</button>
+        </fieldset>
+      </form>
 
+      <form id="letras">
+        <fieldset>
+          <legend>Letras</legend>
+          <label for="letra">Introduce una letra</label>
+          <input type="text" id="letra" name="letra" />
+          <button>Comprobar letra</button>
+        </fieldset>
+      </form>
 
+      <p class="palabraAleatoria"></p>
+    </main>
 
     <!-- Modal Intro -->
     <div class="modal">
-        <p>El ahorcado</p>
-        <p class="textoIntro"></p>
-        <div class="alinearCentro">
-            <button class="seguir aclarar">Continuar</button>
-        </div>
+      <p>El ahorcado</p>
+      <p class="textoIntro"></p>
+      <div class="alinearCentro">
+        <button class="seguir aclarar">Continuar</button>
+      </div>
     </div>
     <!-- Aquí va la intro de David -->
     <script src="/intro.js"></script>
-</body>
+  </body>
 </html>
