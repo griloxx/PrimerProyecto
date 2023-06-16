@@ -48,14 +48,14 @@ export function seleccionarPalabraAleatoria() {
   let palabra = words[palabraAleatoria];
   return palabra;
 }
-let palabra2 = seleccionarPalabraAleatoria();
+export let palabra2 = seleccionarPalabraAleatoria();
 
 //función para crear los _ _ _ de la palabra seleccionada
 
 export function generarGuion(palabra2) {
   return " _ ".repeat(palabra2.length);
 }
-let guiones = generarGuion(palabra2);
+export let guiones = generarGuion(palabra2);
 
 // Selecciono parrafo con querySelector
 const palabraSeleccionada = document.querySelector(".palabraAleatoria");
