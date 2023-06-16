@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+}
+
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(28, 28, 28);
+    top: 0;
+    transition: opacity .5s, visibility 1s;
+}
+.modal.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+.modal p:first-child {
+    display: flex;
+    font-size: 6rem;
+    justify-content: center;
+    margin-top: 8rem;
+    margin-bottom: 4rem;
+    padding: 0;
+    animation: animate 2s infinite linear;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 8px;
+    text-shadow: none;
+    text-transform: uppercase;
+}
+
+
+@keyframes animate {
+    0% {
+        color: rgb(72, 72, 72);
+        text-shadow: none;
+    }
+    
+    5% {
+        color: rgb(255, 249, 0);
+        text-shadow: 0 0 7px rgb(255, 249, 0), 0 0 20px rgb(255, 108, 0);
+    }
+    30% {
+        color: rgb(72, 72, 72);
+        text-shadow: none;
+    }
+    35% {
+        color: rgb(255, 249, 0);
+        text-shadow: 0 0 7px rgb(255, 249, 0), 0 0 20px rgb(255, 108, 0);
+    }
+    70% {
+        color: rgb(72, 72, 72);
+        text-shadow: none;
+    }
+    85% {
+        color: rgb(255, 249, 0);
+        text-shadow: 0 0 7px rgb(255, 249, 0), 0 0 20px rgb(255, 108, 0);
+    }
+    90% {
+        color: rgb(72, 72, 72);
+        text-shadow: none;
+    }
+    100% {
+        color: rgb(72, 72, 72);
+        text-shadow: none;
+    }
+}
+.textoIntro {
+    color: rgb(144, 144, 144);
+    font-size: 4rem;
+    margin: 0 4rem;
+}
+.alinearCentro {
+    display: flex;
+    justify-content: center;
+}
+.alinearCentro .seguir {
+    margin: 2rem;
+    background-color: rgb(28, 28, 28);
+    border: .3px solid rgb(217, 214, 0);
+    box-shadow: 0 0 2px rgb(255, 249, 0), 0 0 10px rgb(255, 108, 0);
+    border-radius: 5px;
+    padding: .5rem 1rem;
+    color: rgb(144, 144, 144);
+    font-weight: 700;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: opacity 1s ease-in-out;
+}
+.aclarar {
+    opacity: 0;
+}
