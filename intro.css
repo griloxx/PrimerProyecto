@@ -21,7 +21,7 @@ body {
     margin-top: 8rem;
     margin-bottom: 4rem;
     padding: 0;
-    animation: animate 2s infinite linear;
+    animation: animate 2s forwards linear;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 8px;
     text-shadow: none;
@@ -60,8 +60,8 @@ body {
         text-shadow: none;
     }
     100% {
-        color: rgb(72, 72, 72);
-        text-shadow: none;
+        color: rgb(255, 249, 0);
+        text-shadow: 0 0 7px rgb(255, 249, 0), 0 0 20px rgb(255, 108, 0);
     }
 }
 .textoIntro {
