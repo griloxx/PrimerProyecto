@@ -89,3 +89,65 @@ body {
 .aclarar {
     opacity: 0;
 }
+
+@media (max-width: 1440px) {
+    .textoIntro {
+        font-size: 3.5rem;
+    }
+}
+@media (max-width: 1280px) {
+    .textoIntro {
+        font-size: 3.5rem;
+    }
+}
+@media (max-width: 1024px) {
+    .textoIntro {
+        font-size: 2.5rem;
+    }
+}
+@media (max-width: 768px) {
+    .textoIntro {
+        font-size: 2rem;
+    }
+    .modal p:first-child {
+        font-size: 5rem;
+    }
+}
+@media (max-width: 428px) {
+    .textoIntro {
+        font-size: 1.8rem;
+        margin: 0 3rem;
+    }
+    .modal p:first-child {
+        font-size: 2.5rem;
+        margin-top: 4rem;
+    }
+    .alinearCentro .seguir {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 375px) {
+    .textoIntro {
+        font-size: 1.5rem;
+        margin: 0 3rem;
+    }
+    .modal p:first-child {
+        font-size: 2rem;
+    }
+    .alinearCentro .seguir {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 325px) {
+    .textoIntro {
+        font-size: 1.1rem;
+        margin: 0 3rem;
+    }
+    .modal p:first-child {
+        font-size: 1.7rem;
+        margin-bottom: 2rem;
+    }
+    .alinearCentro .seguir {
+        font-size: 1rem;
+    }
+}
