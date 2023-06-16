@@ -60,11 +60,10 @@ export let guiones = generarGuion(palabra2);
 // Selecciono parrafo con querySelector
 const palabraSeleccionada = document.querySelector(".palabraAleatoria");
 
-function añadirGuiones() {
+export function añadirGuiones() {
   let botonStart = document.querySelector(".comenzar");
   botonStart.addEventListener("click", (event) => {
     event.preventDefault();
     palabraSeleccionada.textContent = `La palabra secreta es: ( ${guiones} )`;
   });
 }
-añadirGuiones();
