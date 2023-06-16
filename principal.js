@@ -43,7 +43,7 @@ let words = [
 ];
 
 //función para  Seleccionar la palabra aleatoria del array
-function seleccionarPalabraAleatoria() {
+export function seleccionarPalabraAleatoria() {
   const palabraAleatoria = Math.floor(Math.random() * (words.length + 1));
   let palabra = words[palabraAleatoria];
   return palabra;
@@ -52,7 +52,7 @@ let palabra2 = seleccionarPalabraAleatoria();
 
 //función para crear los _ _ _ de la palabra seleccionada
 
-function generarGuion(palabra2) {
+export function generarGuion(palabra2) {
   return " _ ".repeat(palabra2.length);
 }
 let guiones = generarGuion(palabra2);
