@@ -43,27 +43,32 @@ let words = [
 ];
 
 //función para  Seleccionar la palabra aleatoria del array
-export function seleccionarPalabraAleatoria() {
+function seleccionarPalabraAleatoria() {
   const palabraAleatoria = Math.floor(Math.random() * (words.length + 1));
   let palabra = words[palabraAleatoria];
   return palabra;
 }
-export let palabra2 = seleccionarPalabraAleatoria();
+let palabra2 = seleccionarPalabraAleatoria();
 
 //función para crear los _ _ _ de la palabra seleccionada
 
-export function generarGuion(palabra2) {
+function generarGuion(palabra2) {
   return " _ ".repeat(palabra2.length);
 }
-export let guiones = generarGuion(palabra2);
+let guiones = generarGuion(palabra2);
 
-// Selecciono parrafo con querySelector
+//Selecciono parrafo con querySelector
 const palabraSeleccionada = document.querySelector(".palabraAleatoria");
 
-export function añadirGuiones() {
+function añadirGuiones() {
   let botonStart = document.querySelector(".comenzar");
   botonStart.addEventListener("click", (event) => {
     event.preventDefault();
     palabraSeleccionada.textContent = `La palabra secreta es: ( ${guiones} )`;
+    palabraSeleccionada.classList.add("parrafoNuevo");
   });
 }
+
+añadirGuiones();
+palabraAleatoria();
+generarGuion();

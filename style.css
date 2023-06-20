@@ -1,0 +1,203 @@
+/*hacer limpieza del documento*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*separación del cuerpo de la pÃ¡gina del margen y su formato*/
+body {
+  margin: 1em;
+  font-family: "Nunito", sans-serif, Times, serif;
+  background-image: URl(/imagen-fondo.jpeg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  height: fit-content;
+  background-size: cover;
+}
+
+/*color tí­tulo del juego*/
+h1 {
+  color: rgb(144, 59, 31);
+  font-size: 60px;
+  text-align: center;
+  padding: 10px;
+  padding-bottom: 80px;
+}
+h2 {
+  color: rgb(144, 59, 31);
+  font-size: 40px;
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 120px;
+}
+/*alinear los textos del div con respecto a la imagen del ahorcado*/
+main {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  background: rgba(247, 205, 52, 0.6);
+  text-align: center;
+}
+/*incorporar la imagen del ahorcado*/
+.box {
+  border: 1px solid;
+  top: 10px;
+  left: 10px;
+  width: 60pxpx;
+  height: 60px;
+  border-color: white;
+  background-color: white;
+  background-image: URL(/img0.png);
+  display: flex;
+}
+.imagen {
+  width: 250px;
+  float: both;
+}
+
+/*color de las casillas*/
+#inicio {
+  color: rgb(144, 59, 31);
+  text-align: left;
+  padding-left: 25px;
+  padding-top: 30px;
+}
+#letras {
+  color: rgb(144, 59, 31);
+  text-align: left;
+  padding-left: 25px;
+  padding-top: 30px;
+}
+/*caja donde se introduce la letra a comprobar*/
+fieldset {
+  border-color: transparent;
+  font-size: 1.8em;
+}
+/*agrandar la caja de texto de la letra a introducir*/
+#letra {
+  font-size: 25px;
+}
+
+/*Ajuste color/tamaño botones*/
+.comenzar {
+  color: white;
+  background-color: rgb(201, 115, 16);
+  font-size: 20px;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5%;
+}
+.comprobar {
+  color: white;
+  background: rgb(201, 115, 16);
+  font-size: 20px;
+  border: none;
+  padding: 0.5% 0.5% 0.5% 0.5%;
+  border-radius: 5%;
+}
+.parrafoNuevo {
+  color: rgb(144, 59, 31);
+  font-size: 25px;
+}
+
+@media (max-width: 325px) {
+}
+/*Iphone SE*/
+@media (max-width: 375px) {
+  body {
+    display: grid;
+    grid-template-rows: 5rem 40rem 5rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .box {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  legend {
+    text-align: left;
+  }
+  label {
+    text-align: left;
+  }
+  .imagen {
+    order: 2;
+    width: 250px;
+    float: none;
+    margin-top: 10px;
+  }
+  h1 {
+    font-size: 30px;
+    padding-bottom: 15px;
+  }
+  h2 {
+    font-size: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  #inicio {
+    font-size: 10px;
+    padding-left: 0;
+    padding-top: 0;
+  }
+
+  #letras {
+    font-size: 10px;
+    padding-left: 0;
+    padding-top: 0;
+  }
+  #letras fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  footer {
+    order: 3;
+  }
+}
+/*color de las casillas*/
+#inicio {
+  color: rgb(144, 59, 31);
+  text-align: center;
+}
+#letras {
+  color: rgb(144, 59, 31);
+  text-align: center;
+}
+.parrafoNuevo {
+  font-size: 20px;
+}
+
+@media (max-width: 428px) {
+}
+/*De 700 para arriba el color de la letra tiene que ser mas oscuro*/
+@media (max-width: 768px) {
+  #inicio {
+    color: rgba(115, 37, 11, 0.664);
+  }
+  #letras {
+    color: rgba(115, 37, 11, 0.664);
+  }
+}
+
+@media (max-width: 1024px) {
+  #inicio {
+    color: rgba(115, 37, 11, 0.664);
+  }
+  #letras {
+    color: rgba(115, 37, 11, 0.664);
+  }
+}
