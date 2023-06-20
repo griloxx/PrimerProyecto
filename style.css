@@ -9,7 +9,7 @@
 body {
   margin: 1em;
   font-family: "Nunito", sans-serif, Times, serif;
-  background-image: URl(/imagen-fondo.jpeg);
+  background-image: URl(/img/imagen-fondo.jpeg);
   background-repeat: no-repeat;
   background-color: transparent;
   height: fit-content;
@@ -45,16 +45,39 @@ main {
   border: 1px solid;
   top: 10px;
   left: 10px;
-  width: 60pxpx;
+  width: 100px;
   height: 60px;
   border-color: white;
   background-color: white;
-  background-image: URL(/img0.png);
   display: flex;
 }
-.imagen {
+
+.tamaño {
   width: 250px;
-  float: both;
+  height: 290px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.imagen {
+  background-image: url(/img/img0.png);
+}
+.imagen1 {
+  background-image: url(/img/img1.png);
+}
+.imagen2 {
+  background-image: url(/img/img2.png);
+}
+.imagen3 {
+  background-image: url(/img/img3.png);
+}
+.imagen4 {
+  background-image: url(/img/img4.png);
+}
+.imagen5 {
+  background-image: url(/img/img5.png);
+}
+.imagen6 {
+  background-image: url(/img/img6.png);
 }
 
 /*color de las casillas*/
