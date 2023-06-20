@@ -4,40 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/intro.css" />
+    <link rel="stylesheet" href="/style.css"/>
     <title>El Ahorcado</title>
   </head>
   <body>
+
     <!--Modificación Raquel-->
     <header>
       <h1>EL AHORCADO</h1>
     </header>
+     
+   
     <main>
+      <!--incorporo la imagen del ahorcado-->
+      <img class="imagen" src="/img0.png" alt="Imagen del ahorcado">  
+    <div class="Box">
       <form id="inicio">
         <fieldset>
           <legend>Pulsa el botón para empezar a jugar</legend>
           <button class="comenzar">Start</button>
         </fieldset>
       </form>
-
+ 
       <form id="letras">
         <fieldset>
-          <legend>Letras</legend>
           <label for="letra">Introduce una letra</label>
           <input type="text" id="letra" name="letra" />
-          <button>Comprobar letra</button>
+          <button class="comprobar">Comprobar letra</button>
         </fieldset>
       </form>
 
       <p class="palabraAleatoria"></p>
+   </div>
     </main>
-    <aside>
+    <footer>
       <p>
-        <h2>Salva a Felipe de morir ahorcado</h2>
+        <h2>¡¡Salva a Felipe de morir ahorcado!!</h2>
       </p>
 
-      <!--Maria aqui puedes insertar la parte del muñequito el Ahorcado-->
-      <img src="" alt="" />
-    </aside>
+    </footer>
     <!-- Modal Intro -->
     <div class="modal">
       <p>El ahorcado</p>
@@ -49,6 +54,6 @@
     <!-- Aquí va la intro de David -->
     <script src="/intro.js"></script>
     <!-- Java Raquel -->
-    <!--<script src="/principal.js"></script>-->
+    <script src="/principal.js"></script>
   </body>
 </html>
