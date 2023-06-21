@@ -12,7 +12,16 @@ console.log(existeLetra("a", palabra2));
 let guiones = devuelveSolucionParcial("a", palabra2, guionesBajos);
 console.log(guiones);
 let intentos = 0;
-
+const comenzar = document.querySelector(".comenzar");
+const botonComprobar = document.querySelector(".comprobar");
+botonComprobar.setAttribute("disabled", true);
+botonComprobar.classList.replace("comprobar", "deshabilitado");
+comenzar.addEventListener("click", () => {
+  botonComprobar.removeAttribute("disabled");
+  botonComprobar.classList.replace("deshabilitado", "comprobar");
+  comenzar.classList.replace("comenzar", "deshabilitado");
+  comenzar.setAttribute("disabled", true);
+});
 
 function existeLetra(letra, palabra) {
   for (let i = 0; i < palabra.length; i++) {
@@ -51,17 +60,17 @@ function comprobarLetra(event) {
   const imagen = document.querySelector(".tamaño");
   const letraInput = document.getElementById("letra");
   const letra = letraInput.value.toLowerCase(); // Convertir la letra a minúscula
-  let box = document.querySelector(".Box")
-  let parrafo = document.createElement('p');
+  let box = document.querySelector(".Box");
+  let parrafo = document.createElement("p");
   parrafo.classList.add("error");
-  
+
   if (!letra.match(/[a-z]/)) {
     // Si el caracter ingresado no es una letra
-    if(parrafo.classList.contains("error")) {
-
+    if (parrafo.classList.contains("error")) {
     }
     box.prepend(parrafo);
-    parrafo.textContent = "El caracter introducido no es una letra. Introduzca una letra.";
+    parrafo.textContent =
+      "El caracter introducido no es una letra. Introduzca una letra.";
     return;
   }
   if (letra.length > 1) {
@@ -74,25 +83,32 @@ function comprobarLetra(event) {
 
   if (existeLetra(letra, palabra2)) {
     // Si la letra es correcta
-    const solucionParcial = devuelveSolucionParcial(letra, palabra2, guionesBajos);
+    const solucionParcial = devuelveSolucionParcial(
+      letra,
+      palabra2,
+      guionesBajos
+    );
 
     document.querySelector(".guionesBajos").textContent = solucionParcial;
     box.prepend(parrafo);
     parrafo.classList.replace("error", "correcto");
-    parrafo.textContent = "Felicidades, la letra es correcta. Estás más cerca de salvar a Felipe.";
+    parrafo.textContent =
+      "Felicidades, la letra es correcta. Estás más cerca de salvar a Felipe.";
 
     if (solucionParcial === palabra2) {
       box.prepend(parrafo);
       parrafo.classList.replace("error", "correcto");
       parrafo.textContent = "Enhorabuena!!! Has salvado a Felipe.";
+      botonComprobar.setAttribute("disabled", true);
+      botonComprobar.classList.replace("comprobar", "deshabilitado");
     }
   } else {
     // Si la letra es incorrecta
     box.prepend(parrafo);
     parrafo.textContent = "Error fatal!! La vida de Felipe está en tus manos.";
-    
+
     let numerodeIntentos = aumentoNumeroIntentos();
-    console.log(numerodeIntentos)
+    console.log(numerodeIntentos);
     switch (numerodeIntentos) {
       case 1:
         imagen.classList.replace("imagen", "imagen1");
@@ -109,12 +125,13 @@ function comprobarLetra(event) {
       case 5:
         imagen.classList.replace("imagen4", "imagen5");
         break;
-    
+
       default:
         imagen.classList.replace("imagen5", "imagen6");
         box.prepend(parrafo);
         parrafo.textContent = "¡¡Has Perdido!! ¡¡Felipe a muerto!";
         botonComprobar.setAttribute("disabled", true);
+        botonComprobar.classList.replace("comprobar", "deshabilitado");
         break;
     }
   }
@@ -123,5 +140,4 @@ function comprobarLetra(event) {
 }
 
 // Evento para el botón de comprobar letra
-const botonComprobar = document.querySelector(".comprobar");
 botonComprobar.addEventListener("click", comprobarLetra);

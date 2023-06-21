@@ -122,6 +122,14 @@ fieldset {
   padding: 0.5% 0.5% 0.5% 0.5%;
   border-radius: 5%;
 }
+.deshabilitado {
+  color: white;
+  background: grey;
+  font-size: 20px;
+  border: none;
+  padding: 0.5% 0.5% 0.5% 0.5%;
+  border-radius: 5%;
+}
 .parrafoNuevo {
   color: rgb(144, 59, 31);
   font-size: 25px;
@@ -141,7 +149,6 @@ fieldset {
   font-size: 25px;
   margin-left: 100px;
   text-align: center;
-  
 }
 .correcto {
   color: white;
@@ -151,7 +158,6 @@ fieldset {
   font-size: 25px;
   margin-left: 100px;
   text-align: center;
-  
 }
 /*Mobile S/* /*¡¡¡este se muestra bien !!!*/
 @media (max-width: 325px) {
