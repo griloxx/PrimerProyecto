@@ -125,7 +125,9 @@ fieldset {
 .parrafoNuevo {
   color: rgb(144, 59, 31);
   font-size: 25px;
+  text-align: center;
 }
+
 .palabraAleatoria {
   margin: 20px;
   padding: 2px;
@@ -162,6 +164,7 @@ fieldset {
   label {
     text-align: left;
   }
+
   .imagen {
     order: 2;
     width: 100px;
@@ -288,7 +291,7 @@ fieldset {
 .parrafoNuevo {
   font-size: 20px;
 }
-/*Mobile L*/
+/*Tablet*/
 @media (max-width: 768px) {
   body {
     display: grid;
@@ -343,6 +346,10 @@ fieldset {
     padding-left: 0;
     padding-top: 0;
   }
+  .comenzar {
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
   #letras fieldset {
     display: flex;
     flex-direction: column;
@@ -365,21 +372,32 @@ fieldset {
     font-size: 20px;
   }
 }
-/*De 700 para arriba el color de la letra tiene que ser mas oscuro*/
-@media (max-width: 768px) {
-  #inicio {
-    color: rgba(115, 37, 11, 0.664);
-  }
-  #letras {
-    color: rgba(115, 37, 11, 0.664);
-  }
-}
-
+/*Laptop*/
 @media (max-width: 1024px) {
+  body {
+    display: grid;
+    grid-template-rows: 5rem 40rem 5rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    height: auto;
+    width: auto;
+  }
   #inicio {
     color: rgba(115, 37, 11, 0.664);
   }
   #letras {
     color: rgba(115, 37, 11, 0.664);
+  }
+  .parrafoNuevo {
+    font-size: 30px;
   }
 }
