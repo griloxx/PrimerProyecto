@@ -59,13 +59,16 @@ let guiones = generarGuion(palabra2);
 
 //Selecciono parrafo con querySelector
 const palabraSeleccionada = document.querySelector(".palabraAleatoria");
+const guiones2 = document.querySelector(".guiones");
 
 function añadirGuiones() {
   let botonStart = document.querySelector(".comenzar");
   botonStart.addEventListener("click", (event) => {
     event.preventDefault();
-    palabraSeleccionada.textContent = `La palabra secreta es: ( ${guiones} )`;
+    palabraSeleccionada.textContent = `La palabra secreta es: `;
     palabraSeleccionada.classList.add("parrafoNuevo");
+    guiones2.textContent = `${guiones}`;
+    guiones2.classList.add("guionesBajos");
   });
 }
 
