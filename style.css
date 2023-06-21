@@ -133,6 +133,9 @@ fieldset {
   padding: 2px;
   align-items: left;
 }
+.error {
+  color: red;
+}
 /*Mobile S/* /*¡¡¡este se muestra bien !!!*/
 @media (max-width: 325px) {
   body {
