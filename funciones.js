@@ -56,12 +56,14 @@ function aumentoNumeroIntentos() {
 // Función para validar la letra ingresada y mostrar mensajes
 function comprobarLetra(event) {
   event.preventDefault(); // Evitar el envío del formulario y la actualización de la página
+  let box = document.querySelector(".Box");
+  let parrafo = document.createElement("p");
+
   let intentos = 0;
   const imagen = document.querySelector(".tamaño");
   const letraInput = document.getElementById("letra");
   const letra = letraInput.value.toLowerCase(); // Convertir la letra a minúscula
-  let box = document.querySelector(".Box");
-  let parrafo = document.createElement("p");
+
   parrafo.classList.add("error");
 
   if (!letra.match(/[a-z]/)) {
