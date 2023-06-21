@@ -7,7 +7,6 @@
 
 /*separación del cuerpo de la pÃ¡gina del margen y su formato*/
 body {
-  margin: 1em;
   font-family: "Nunito", sans-serif, Times, serif;
   background-image: URl(/img/imagen-fondo.jpeg);
   background-repeat: no-repeat;
@@ -38,7 +37,7 @@ main {
   margin: auto;
   padding: 20px;
   background: rgba(247, 205, 52, 0.6);
-  text-align: center;
+  text-align: left;
 }
 /* Caja que contiene el formulario y la imagen del ahorcado*/
 .box {
@@ -127,85 +126,93 @@ fieldset {
   color: rgb(144, 59, 31);
   font-size: 25px;
 }
-
+.palabraAleatoria {
+  margin: 20px;
+  padding: 2px;
+  align-items: left;
+}
+/*Mobile S/* /*¡¡¡este se muestra bien !!!*/
 @media (max-width: 325px) {
-  @media (max-width: 375px) {
-    body {
-      display: grid;
-      grid-template-rows: 5rem 40rem 5rem;
-      grid-template-columns: 1fr;
-      grid-template-areas:
-        "header"
-        "main"
-        "footer";
-    }
-    main {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-    }
+  body {
+    display: grid;
+    grid-template-rows: 5rem 40rem 5rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 30px;
+    width: 280px;
+  }
 
-    .box {
-      order: 1;
-      display: flex;
-      flex-direction: column;
-    }
-    legend {
-      text-align: left;
-    }
-    label {
-      text-align: left;
-    }
-    .imagen {
-      order: 2;
-      width: 250px;
-      float: none;
-      margin-top: 10px;
-    }
-    h1 {
-      font-size: 30px;
-      padding-bottom: 15px;
-    }
-    h2 {
-      font-size: 20px;
-      padding-top: 0;
-      padding-bottom: 0;
-    }
-    #inicio {
-      font-size: 10px;
-      padding-left: 0;
-      padding-top: 0;
-    }
-
-    #letras {
-      font-size: 10px;
-      padding-left: 0;
-      padding-top: 0;
-    }
-    #letras fieldset {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    footer {
-      order: 3;
-    }
+  .box {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    font-size: 5 px;
   }
-  /*color de las casillas*/
-  #inicio {
-    color: rgb(144, 59, 31);
-    text-align: center;
+  legend {
+    text-align: left;
   }
-  #letras {
-    color: rgb(144, 59, 31);
-    text-align: center;
+  label {
+    text-align: left;
   }
-  .parrafoNuevo {
+  .imagen {
+    order: 2;
+    width: 100px;
+    float: none;
+    margin-top: 10px;
+  }
+  h1 {
+    font-size: 30px;
+    padding-bottom: 15px;
+  }
+  h2 {
     font-size: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  #inicio {
+    font-size: 10px;
+    padding-left: 0;
+    padding-top: 0;
+  }
+
+  #letras {
+    font-size: 10px;
+    padding-left: 0;
+    padding-top: 0;
+  }
+  #letras fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  footer {
+    order: 3;
   }
 }
-/*Iphone SE*/
+/*color de las casillas*/
+#inicio {
+  color: rgb(144, 59, 31);
+}
+#letras {
+  color: rgb(144, 59, 31);
+}
+.parrafoNuevo {
+  font-size: 20px;
+}
+.palabraAleatoria {
+  margin: 20px;
+  padding: 2px;
+  align-items: left;
+}
+/*Mobile M*/ /* /*¡¡¡este se muestra bien !!!*/
 @media (max-width: 375px) {
   body {
     display: grid;
@@ -236,7 +243,7 @@ fieldset {
   }
   .imagen {
     order: 2;
-    width: 250px;
+    width: 380px;
     float: none;
     margin-top: 10px;
   }
@@ -281,8 +288,8 @@ fieldset {
 .parrafoNuevo {
   font-size: 20px;
 }
-
-@media (max-width: 428px) {
+/*Mobile L*/
+@media (max-width: 768px) {
   body {
     display: grid;
     grid-template-rows: 5rem 40rem 5rem;
@@ -348,6 +355,7 @@ fieldset {
   #inicio {
     color: rgb(144, 59, 31);
     text-align: center;
+    margin-top: 20px;
   }
   #letras {
     color: rgb(144, 59, 31);
