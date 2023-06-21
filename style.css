@@ -134,7 +134,24 @@ fieldset {
   align-items: left;
 }
 .error {
-  color: red;
+  color: white;
+  background-color: red;
+  padding: 2px 5px;
+  font-weight: bold;
+  font-size: 25px;
+  margin-left: 100px;
+  text-align: center;
+  
+}
+.correcto {
+  color: white;
+  background-color: green;
+  padding: 2px 5px;
+  font-weight: bold;
+  font-size: 25px;
+  margin-left: 100px;
+  text-align: center;
+  
 }
 /*Mobile S/* /*¡¡¡este se muestra bien !!!*/
 @media (max-width: 325px) {
