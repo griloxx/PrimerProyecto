@@ -49,18 +49,17 @@ export function seleccionarPalabraAleatoria() {
   return palabra;
 }
 export let palabra2 = seleccionarPalabraAleatoria();
-
 //función para crear los _ _ _ de la palabra seleccionada
 
 export function generarGuion(palabra2) {
-  return " _ ".repeat(palabra2.length);
+  return "_".repeat(palabra2.length);
 }
-export let guiones = generarGuion(palabra2);
+export let guionesBajos = generarGuion(palabra2);
 
 //Selecciono parrafo con querySelector
 const palabraSeleccionada = document.querySelector(".palabraAleatoria");
 
-export function añadirGuiones() {
+export function añadirGuiones(guiones) {
   let botonStart = document.querySelector(".comenzar");
   botonStart.addEventListener("click", (event) => {
     event.preventDefault();

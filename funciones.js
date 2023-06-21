@@ -1,55 +1,11 @@
-let words = [
-  "feo",
-  "hoyuelo",
-  "festejo",
-  "unicornio",
-  "figuritas",
-  "lagartija",
-  "tramar",
-  "atletismo",
-  "facultad",
-  "loro",
-  "puntual",
-  "humear",
-  "cuerpo",
-  "anunciar",
-  "horno",
-  "alianza",
-  "hiedra",
-  "dictador",
-  "elegante",
-  "estribo",
-  "respaldo",
-  "vestuario",
-  "dibujar",
-  "palmera",
-  "adelgazar",
-  "inmenso",
-  "plumas",
-  "congelador",
-  "parte",
-  "establo",
-  "fotocopia",
-  "cuchillo",
-  "radio",
-  "levantar",
-  "bidet",
-  "ayer",
-  "gradas",
-];
-//función para  Seleccionar la palabra aleatoria del array
-export function seleccionarPalabraAleatoria() {
-  const palabraAleatoria = Math.floor(Math.random() * (words.length - 1));
-  return words[palabraAleatoria];
-}
+import { añadirGuiones,seleccionarPalabraAleatoria,generarGuion,palabra2, guionesBajos } from "./principal.js";
 
-//función para crear los _ _ _ de la palabra seleccionada
-
-export function generarGuion(palabra) {
-  return "_".repeat(palabra.length);
-}
-
-export function existeLetra(letra, palabra) {
+añadirGuiones(guionesBajos);
+console.log(palabra2);
+console.log(existeLetra("a", palabra2));
+let guiones = devuelveSolucionParcial("a",palabra2,guionesBajos );
+console.log(guiones)
+function existeLetra(letra, palabra) {
   for (let i = 0; i < palabra.length; i++) {
     if (palabra[i] === letra) {
       return true;
@@ -58,8 +14,7 @@ export function existeLetra(letra, palabra) {
 
   return false;
 }
-
-export function devuelveSolucionParcial(letra, palabra, solucionAnterior) {
+function devuelveSolucionParcial(letra, palabra, solucionAnterior) {
   let solucionParcial = "";
 
   for (let i = 0; i < palabra.length; i++) {
@@ -73,6 +28,6 @@ export function devuelveSolucionParcial(letra, palabra, solucionAnterior) {
   return solucionParcial;
 }
 
-export function aumentoNumeroIntentos(numeroIntentos) {
+function aumentoNumeroIntentos(numeroIntentos) {
   return numeroIntentos + 1;
 }
