@@ -58,16 +58,16 @@ export function generarGuion(palabra2) {
 export let guiones = generarGuion(palabra2);
 
 //Selecciono parrafo con querySelector
-export const palabraSeleccionada = document.querySelector(".palabraAleatoria");
+const palabraSeleccionada = document.querySelector(".palabraAleatoria");
 
 export function añadirGuiones() {
   let botonStart = document.querySelector(".comenzar");
   botonStart.addEventListener("click", (event) => {
     event.preventDefault();
-    const guiones2 = document.querySelector(".palabraAleatoria");
+    const guiones2 = document.querySelector(".guionesBajos");
     palabraSeleccionada.textContent = `La palabra secreta es: `;
     palabraSeleccionada.classList.add("parrafoNuevo");
     guiones2.textContent = `${guiones}`;
-    guiones2.classList.add("guionesBajos");
+    guiones2.classList.add("parrafoNuevo");
   });
 }
