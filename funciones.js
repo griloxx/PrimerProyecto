@@ -5,12 +5,8 @@ import {
   palabra2,
   guionesBajos,
 } from "./principal.js";
-
 añadirGuiones(guionesBajos);
-console.log(palabra2);
-console.log(existeLetra("a", palabra2));
 let guiones = devuelveSolucionParcial("a", palabra2, guionesBajos);
-console.log(guiones);
 let intentos = 0;
 const comenzar = document.querySelector(".comenzar");
 const botonComprobar = document.querySelector(".comprobar");
@@ -58,15 +54,23 @@ function comprobarLetra(event) {
   event.preventDefault(); // Evitar el envío del formulario y la actualización de la página
   let box = document.querySelector(".Box");
   let parrafo = document.createElement("p");
-
+  if(box.children[0].tagName === parrafo.tagName) {
+    box.removeChild(box.children[0]);
+  }
+  
   let intentos = 0;
   const imagen = document.querySelector(".tamaño");
   const letraInput = document.getElementById("letra");
   const letra = letraInput.value.toLowerCase(); // Convertir la letra a minúscula
 
   parrafo.classList.add("error");
-
-  if (!letra.match(/[a-z]/)) {
+  if ( letra.length === 0) {
+    box.prepend(parrafo);
+    parrafo.textContent =
+      "Debes introducir un carácter mínimo.";
+    return;
+  }
+  if (!letra.match(/[a-z]/) && letra.length === 1) {
     // Si el caracter ingresado no es una letra
     if (parrafo.classList.contains("error")) {
     }
@@ -78,10 +82,18 @@ function comprobarLetra(event) {
   if (letra.length > 1) {
     box.prepend(parrafo);
     parrafo.textContent = "Solo puedes introducir una letra.";
+    return
   }
 
   const palabraAleatoria = palabra2;
   const guionesBajos = document.querySelector(".guionesBajos").textContent;
+
+  if (existeLetra(letra, guionesBajos)){
+    box.prepend(parrafo);
+    parrafo.textContent =
+      "La letra introducida ya a sido usada.";
+      return;
+  }
 
   if (existeLetra(letra, palabra2)) {
     // Si la letra es correcta
@@ -108,9 +120,13 @@ function comprobarLetra(event) {
     // Si la letra es incorrecta
     box.prepend(parrafo);
     parrafo.textContent = "Error fatal!! La vida de Felipe está en tus manos.";
-
+    let numeroMaxIntentos = 6;
     let numerodeIntentos = aumentoNumeroIntentos();
-    console.log(numerodeIntentos);
+    // let intentosRestantes = numeroMaxIntentos - numerodeIntentos;
+    // const parrafoIntentos = document.createElement("p");
+    // parrafoIntentos.textContent = "Te quedan " + intentosRestantes + " intentos."
+    // parrafoIntentos.classList.add("parrafoNuevo")
+    // box.insertBefore(parrafoIntentos, document.querySelector("#inicio"))
     switch (numerodeIntentos) {
       case 1:
         imagen.classList.replace("imagen", "imagen1");
