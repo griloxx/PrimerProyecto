@@ -163,8 +163,21 @@ fieldset {
   margin-bottom: 20px;
   text-align: center;
 }
-/*Mobile S/* /*¡¡¡este se muestra bien !!!*/
-@media (max-width: 325px) {
+
+/*color de las casillas*/
+#inicio {
+  color: rgb(144, 59, 31);
+  text-align: center;
+}
+#letras {
+  color: rgb(144, 59, 31);
+  text-align: center;
+}
+.parrafoNuevo {
+  font-size: 20px;
+}
+/*Laptop*/
+@media (max-width: 1024px) {
   body {
     display: grid;
     grid-template-rows: 5rem 40rem 5rem;
@@ -177,73 +190,20 @@ fieldset {
   main {
     display: flex;
     flex-direction: column;
-    align-items: left;
-    padding: 30px;
-    width: 280px;
-  }
-
-  .box {
-    order: 1;
-    display: flex;
-    flex-direction: column;
-    font-size: 5 px;
-  }
-  legend {
-    text-align: left;
-  }
-  label {
-    text-align: left;
-  }
-
-  .imagen {
-    order: 2;
-    width: 100px;
-    float: none;
-    margin-top: 10px;
-  }
-  h1 {
-    font-size: 30px;
-    padding-bottom: 15px;
-  }
-  h2 {
-    font-size: 20px;
-    padding-top: 0;
-    padding-bottom: 0;
+    align-items: center;
+    padding: 10px;
+    height: auto;
+    width: auto;
   }
   #inicio {
-    font-size: 10px;
-    padding-left: 0;
-    padding-top: 0;
+    color: rgba(115, 37, 11, 0.664);
   }
-
   #letras {
-    font-size: 10px;
-    padding-left: 0;
-    padding-top: 0;
+    color: rgba(115, 37, 11, 0.664);
   }
-  #letras fieldset {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  .parrafoNuevo {
+    font-size: 17px;
   }
-  footer {
-    order: 3;
-  }
-}
-/*color de las casillas*/
-#inicio {
-  color: rgb(144, 59, 31);
-}
-#letras {
-  color: rgb(144, 59, 31);
-}
-.parrafoNuevo {
-  font-size: 20px;
-}
-.palabraAleatoria {
-  margin: 20px;
-  padding: 2px;
-  align-items: left;
 }
 /*Mobile M*/ /* /*¡¡¡este se muestra bien !!!*/
 @media (max-width: 375px) {
@@ -308,18 +268,6 @@ fieldset {
   footer {
     order: 3;
   }
-}
-/*color de las casillas*/
-#inicio {
-  color: rgb(144, 59, 31);
-  text-align: center;
-}
-#letras {
-  color: rgb(144, 59, 31);
-  text-align: center;
-}
-.parrafoNuevo {
-  font-size: 20px;
 }
 /*Tablet*/
 @media (max-width: 768px) {
@@ -402,8 +350,9 @@ fieldset {
     font-size: 20px;
   }
 }
-/*Laptop*/
-@media (max-width: 1024px) {
+
+/*Mobile S/* /*¡¡¡este se muestra bien !!!*/
+@media (max-width: 325px) {
   body {
     display: grid;
     grid-template-rows: 5rem 40rem 5rem;
@@ -416,18 +365,96 @@ fieldset {
   main {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    height: auto;
-    width: auto;
+    align-items: left;
+    width: 280px;
+  }
+
+  .box {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    font-size: 5 px;
+  }
+  legend {
+    text-align: left;
+  }
+  label {
+    text-align: left;
+  }
+
+  .imagen {
+    order: 2;
+    width: 220px;
+    float: none;
+    margin-top: 35px;
+    margin-bottom: 5px;
+  }
+  h1 {
+    font-size: 30px;
+    padding-bottom: 10px;
+  }
+  h2 {
+    font-size: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 20px;
   }
   #inicio {
-    color: rgba(115, 37, 11, 0.664);
+    font-size: 10px;
+    padding-left: 0;
+    padding-top: 0;
+  }
+
+  #letras {
+    font-size: 10px;
+    padding-left: 0;
+    padding-top: 0;
+  }
+  #letras fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  footer {
+    order: 3;
+  }
+  .error {
+    margin-left: 0px;
+    font-size: 15px;
+  }
+  .correcto {
+    margin-left: 0px;
+    font-size: 15px;
+  }
+  /*color de las casillas*/
+  #inicio {
+    color: rgb(144, 59, 31);
   }
   #letras {
-    color: rgba(115, 37, 11, 0.664);
+    color: rgb(144, 59, 31);
   }
   .parrafoNuevo {
-    font-size: 30px;
+    font-size: 17px;
+  }
+  .palabraAleatoria {
+    margin: 20px;
+    padding: 2px;
+    align-items: left;
+  }
+  .tamaño {
+    width: 250px;
+  }
+  .comenzar {
+    font-size: 15px;
+  }
+  .comprobar {
+    font-size: 15px;
+  }
+  .deshabilitado {
+    font-size: 15px;
+    padding: 0.5% 0.5% 0.5% 0.5%;
+  }
+  #letra {
+    font-size: 18px;
   }
 }
