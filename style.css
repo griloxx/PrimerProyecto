@@ -176,6 +176,117 @@ fieldset {
 .parrafoNuevo {
   font-size: 20px;
 }
+.error {
+  margin-left: 0px;
+  font-size: 15px;
+}
+.correcto {
+  margin-left: 0px;
+  font-size: 15px;
+}
+/*PC*/
+@media (max-width: 1440px) {
+  @media (max-width: 768px) {
+    body {
+      display: grid;
+      grid-template-rows: 5rem 40rem 5rem;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .box {
+      order: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    legend {
+      text-align: left;
+      min-width: 600px;
+      max-width: 600px;
+      margin-left: 0px;
+    }
+    label {
+      text-align: left;
+      min-width: 600px;
+      max-width: 600px;
+      margin-left: 0px;
+    }
+    .imagen {
+      order: 2;
+      width: 250px;
+      float: none;
+      margin-top: 10px;
+      margin-right: 10px;
+    }
+    h1 {
+      font-size: 30px;
+      padding-bottom: 15px;
+    }
+    h2 {
+      font-size: 20px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    #inicio {
+      font-size: 10px;
+      padding-left: 0;
+      padding-top: 0;
+    }
+
+    #letras {
+      font-size: 10px;
+      padding-left: 0;
+      padding-top: 0;
+    }
+    .comenzar {
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+    #letras fieldset {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    footer {
+      order: 3;
+    }
+    /*color de las casillas*/
+    #inicio {
+      color: rgb(144, 59, 31);
+      text-align: center;
+      margin-top: 20px;
+    }
+    #letras {
+      color: rgb(144, 59, 31);
+      text-align: center;
+    }
+    .parrafoNuevo {
+      font-size: 30px;
+    }
+    .error {
+      margin-top: 10px;
+      margin-left: 10px;
+      margin-right: 0;
+      font-size: 20px;
+    }
+    .correcto {
+      margin-top: 10px;
+      margin-left: 20px;
+      margin-right: 0;
+      font-size: 15px;
+    }
+  }
+}
+
 /*Laptop*/
 @media (max-width: 1024px) {
   body {
@@ -193,7 +304,7 @@ fieldset {
     align-items: center;
     padding: 10px;
     height: auto;
-    width: auto;
+    width: 800px;
   }
   #inicio {
     color: rgba(115, 37, 11, 0.664);
@@ -204,72 +315,21 @@ fieldset {
   .parrafoNuevo {
     font-size: 17px;
   }
-}
-/*Mobile M*/ /* /*¡¡¡este se muestra bien !!!*/
-@media (max-width: 375px) {
-  body {
-    display: grid;
-    grid-template-rows: 5rem 40rem 5rem;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "header"
-      "main"
-      "footer";
+  .error {
+    margin-top: 10px;
+    font-size: 15px;
+    min-width: 700px;
+    max-width: 700px;
   }
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-  }
-
-  .box {
-    order: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  legend {
-    text-align: left;
-  }
-  label {
-    text-align: left;
-  }
-  .imagen {
-    order: 2;
-    width: 380px;
-    float: none;
+  .correcto {
+    font-size: 15px;
+    min-width: 700px;
+    max-width: 700px;
     margin-top: 10px;
   }
-  h1 {
-    font-size: 30px;
-    padding-bottom: 15px;
-  }
-  h2 {
-    font-size: 20px;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-  #inicio {
-    font-size: 10px;
-    padding-left: 0;
-    padding-top: 0;
-  }
-
-  #letras {
-    font-size: 10px;
-    padding-left: 0;
-    padding-top: 0;
-  }
-  #letras fieldset {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  footer {
-    order: 3;
-  }
 }
-/*Tablet*/
+
+/*Tablet*/ /*Mobile L*/ /*Este está ok*/
 @media (max-width: 768px) {
   body {
     display: grid;
@@ -285,6 +345,7 @@ fieldset {
     flex-direction: column;
     align-items: center;
     padding: 10px;
+    width: 550px;
   }
 
   .box {
@@ -294,9 +355,13 @@ fieldset {
   }
   legend {
     text-align: left;
+    min-width: 550px;
+    max-width: 550px;
   }
   label {
     text-align: left;
+    min-width: 550px;
+    max-width: 550px;
   }
   .imagen {
     order: 2;
@@ -304,8 +369,27 @@ fieldset {
     float: none;
     margin-top: 10px;
   }
+  .imagen1 {
+    order: 2;
+  }
+  .imagen2 {
+    order: 2;
+  }
+  .imagen3 {
+    order: 2;
+  }
+  .imagen4 {
+    order: 2;
+  }
+  .imagen5 {
+    order: 2;
+  }
+  .imagen6 {
+    order: 2;
+  }
   h1 {
     font-size: 30px;
+    margin-top: 35px;
     padding-bottom: 15px;
   }
   h2 {
@@ -324,9 +408,12 @@ fieldset {
     padding-left: 0;
     padding-top: 0;
   }
+
   .comenzar {
     margin-top: 5px;
     margin-bottom: 10px;
+    font-size: 15px;
+    display: inline-block;
   }
   #letras fieldset {
     display: flex;
@@ -349,9 +436,208 @@ fieldset {
   .parrafoNuevo {
     font-size: 20px;
   }
-}
+  .error {
+    margin-left: 0px;
+    font-size: 15px;
+    min-width: 500px;
+    max-width: 500px;
+  }
+  .correcto {
+    margin-left: 0px;
+    font-size: 15px;
+    min-width: 500px;
+    max-width: 500px;
+  }
+  .deshabilitado {
+    font-size: 15px;
+    padding: 0.5% 0.5% 0.5% 0.5%;
+    margin-top: 5px;
+    display: inline-block;
+  }
+  #letra {
+    font-size: 15px;
+  }
 
-/*Mobile S/* /*¡¡¡este se muestra bien !!!*/
+  .comprobar {
+    font-size: 15px;
+    display: inline-block;
+  }
+}
+/*Mobile L*/ /*Este está ok*/
+@media (max-width: 425px) {
+  body {
+    display: grid;
+    grid-template-rows: 5rem 40rem 5rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    width: 380px;
+  }
+
+  .box {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  legend {
+    text-align: left;
+    min-width: 350px;
+    max-width: 5350px;
+  }
+  label {
+    text-align: left;
+    min-width: 350px;
+    max-width: 350px;
+  }
+  .imagen {
+    order: 2;
+    width: 380px;
+    float: none;
+    margin-top: 10px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  #inicio {
+    font-size: 10px;
+    padding-left: 0;
+    padding-top: 0;
+  }
+
+  #letras {
+    font-size: 10px;
+    padding-left: 0;
+    padding-top: 0;
+  }
+  #letras fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  footer {
+    order: 3;
+  }
+  .error {
+    margin-left: 0px;
+    font-size: 15px;
+    margin-top: 10px;
+    min-width: 350px;
+    max-width: 350px;
+  }
+  .correcto {
+    margin-left: 0px;
+    font-size: 15px;
+    margin-top: 10px;
+    min-width: 350px;
+    max-width: 350px;
+  }
+  .tamaño {
+    width: 250px;
+  }
+}
+/*Mobile M*/ /* /*¡¡¡este se muestra bien !!!*/ /*Revisado-ok*/
+@media (max-width: 375px) {
+  body {
+    display: grid;
+    grid-template-rows: 5rem 40rem 5rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 300px;
+  }
+
+  .box {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  legend {
+    text-align: left;
+    min-width: 280px;
+    max-width: 280px;
+  }
+  label {
+    text-align: left;
+    min-width: 280px;
+    max-width: 280px;
+  }
+  .imagen {
+    order: 2;
+    width: 380px;
+    float: none;
+    margin-top: 10px;
+  }
+
+  h1 {
+    font-size: 30px;
+    padding-bottom: 15px;
+  }
+  h2 {
+    font-size: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  #inicio {
+    font-size: 10px;
+    padding-left: 0;
+    padding-top: 0;
+  }
+
+  #letras {
+    font-size: 10px;
+    padding-left: 0;
+    padding-top: 0;
+  }
+  #letras fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  footer {
+    order: 3;
+  }
+  .error {
+    margin-left: 0px;
+    font-size: 15px;
+    margin-top: 10px;
+    min-width: 280px;
+    max-width: 280px;
+  }
+  .correcto {
+    margin-left: 0px;
+    font-size: 15px;
+    margin-top: 10px;
+    min-width: 280px;
+    max-width: 280px;
+  }
+  .tamaño {
+    width: 250px;
+  }
+}
+/*Mobile S*/ /*¡¡¡este se muestra bien !!!*/ /*Revisado-ok*/
 @media (max-width: 325px) {
   body {
     display: grid;
@@ -377,9 +663,13 @@ fieldset {
   }
   legend {
     text-align: left;
+    min-width: 250px;
+    max-width: 250px;
   }
   label {
     text-align: left;
+    min-width: 250px;
+    max-width: 250px;
   }
 
   .imagen {
@@ -389,6 +679,7 @@ fieldset {
     margin-top: 35px;
     margin-bottom: 5px;
   }
+
   h1 {
     font-size: 30px;
     padding-bottom: 10px;
@@ -421,10 +712,14 @@ fieldset {
   .error {
     margin-left: 0px;
     font-size: 15px;
+    min-width: 250px;
+    max-width: 250px;
   }
   .correcto {
     margin-left: 0px;
     font-size: 15px;
+    min-width: 250px;
+    max-width: 250px;
   }
   /*color de las casillas*/
   #inicio {
