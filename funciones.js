@@ -26,8 +26,9 @@ function iniciar (event) {
   comenzar.setAttribute("disabled", true);
   palabra2 = seleccionarPalabraAleatoria();
   guionesBajos = generarGuion(palabra2);
+  palabra2 = palabra2.split("").join(" ");
+  console.log(palabra2);
   añadirGuiones(guionesBajos);
-  console.log(palabra2,guionesBajos);
   return palabra2, guionesBajos;
 }
 function existeLetra(letra, palabra) {
@@ -59,7 +60,6 @@ function aumentoNumeroIntentos() {
   if(intentos === 6) {
     intentos = 0;
   }
-  console.log(intentos)
   
 
   return intentos;
@@ -117,7 +117,7 @@ function comprobarLetra(event) {
       palabra2,
       pGuionesBajos
     );
-
+console.log(solucionParcial)
     document.querySelector(".guionesBajos").textContent = solucionParcial;
     box.prepend(parrafo);
     parrafo.classList.replace("error", "correcto");

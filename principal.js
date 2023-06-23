@@ -50,7 +50,7 @@ export function seleccionarPalabraAleatoria() {
 }
 
 export function generarGuion(palabra2) {
-  return "_".repeat(palabra2.length);
+  return "_ ".repeat(palabra2.length);
 }
 //Selecciono parrafo con querySelector
 const palabraSeleccionada = document.querySelector(".palabraAleatoria");
