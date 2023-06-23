@@ -2,23 +2,34 @@ import {
   añadirGuiones,
   seleccionarPalabraAleatoria,
   generarGuion,
-  palabra2,
-  guionesBajos,
 } from "./principal.js";
-añadirGuiones(guionesBajos);
-let guiones = devuelveSolucionParcial("a", palabra2, guionesBajos);
 let intentos = 0;
 const comenzar = document.querySelector(".comenzar");
 const botonComprobar = document.querySelector(".comprobar");
+const imagen = document.querySelector(".tamaño");
+let box = document.querySelector(".Box");
+let parrafo = document.createElement("p");
 botonComprobar.setAttribute("disabled", true);
 botonComprobar.classList.replace("comprobar", "deshabilitado");
-comenzar.addEventListener("click", () => {
+let palabra2;
+let guionesBajos;
+comenzar.addEventListener("click", iniciar);
+function iniciar (event) {
+  event.preventDefault();
+  if(box.children[0].tagName === parrafo.tagName) {
+    box.removeChild(box.children[0]);
+  }
+  imagen.classList.replace("imagen6", "imagen");
   botonComprobar.removeAttribute("disabled");
   botonComprobar.classList.replace("deshabilitado", "comprobar");
   comenzar.classList.replace("comenzar", "deshabilitado");
   comenzar.setAttribute("disabled", true);
-});
-
+  palabra2 = seleccionarPalabraAleatoria();
+  guionesBajos = generarGuion(palabra2);
+  añadirGuiones(guionesBajos);
+  console.log(palabra2,guionesBajos);
+  return palabra2, guionesBajos;
+}
 function existeLetra(letra, palabra) {
   for (let i = 0; i < palabra.length; i++) {
     if (palabra[i] === letra) {
@@ -45,6 +56,12 @@ function devuelveSolucionParcial(letra, palabra, solucionAnterior) {
 
 function aumentoNumeroIntentos() {
   intentos++;
+  if(intentos === 6) {
+    intentos = 0;
+  }
+  console.log(intentos)
+  
+
   return intentos;
 }
 
@@ -52,14 +69,13 @@ function aumentoNumeroIntentos() {
 // Función para validar la letra ingresada y mostrar mensajes
 function comprobarLetra(event) {
   event.preventDefault(); // Evitar el envío del formulario y la actualización de la página
-  let box = document.querySelector(".Box");
-  let parrafo = document.createElement("p");
+
+  
   if(box.children[0].tagName === parrafo.tagName) {
     box.removeChild(box.children[0]);
   }
   
-  let intentos = 0;
-  const imagen = document.querySelector(".tamaño");
+  
   const letraInput = document.getElementById("letra");
   const letra = letraInput.value.toLowerCase(); // Convertir la letra a minúscula
 
@@ -84,11 +100,10 @@ function comprobarLetra(event) {
     parrafo.textContent = "Solo puedes introducir una letra.";
     return
   }
-
   const palabraAleatoria = palabra2;
-  const guionesBajos = document.querySelector(".guionesBajos").textContent;
+  const pGuionesBajos = document.querySelector(".guionesBajos").textContent;
 
-  if (existeLetra(letra, guionesBajos)){
+  if (existeLetra(letra, pGuionesBajos)){
     box.prepend(parrafo);
     parrafo.textContent =
       "La letra introducida ya a sido usada.";
@@ -100,7 +115,7 @@ function comprobarLetra(event) {
     const solucionParcial = devuelveSolucionParcial(
       letra,
       palabra2,
-      guionesBajos
+      pGuionesBajos
     );
 
     document.querySelector(".guionesBajos").textContent = solucionParcial;
@@ -115,6 +130,13 @@ function comprobarLetra(event) {
       parrafo.textContent = "Enhorabuena!!! Has salvado a Felipe.";
       botonComprobar.setAttribute("disabled", true);
       botonComprobar.classList.replace("comprobar", "deshabilitado");
+      comenzar.removeAttribute("disabled");
+      comenzar.classList.replace("deshabilitado","comenzar");
+      comenzar.textContent = "Reiniciar";
+      intentos = 0;
+      if( box.children[1].className === "parrafoNuevo") {
+        box.children[1].remove();
+      }
     }
   } else {
     // Si la letra es incorrecta
@@ -122,11 +144,17 @@ function comprobarLetra(event) {
     parrafo.textContent = "Error fatal!! La vida de Felipe está en tus manos.";
     let numeroMaxIntentos = 6;
     let numerodeIntentos = aumentoNumeroIntentos();
-    // let intentosRestantes = numeroMaxIntentos - numerodeIntentos;
-    // const parrafoIntentos = document.createElement("p");
-    // parrafoIntentos.textContent = "Te quedan " + intentosRestantes + " intentos."
-    // parrafoIntentos.classList.add("parrafoNuevo")
-    // box.insertBefore(parrafoIntentos, document.querySelector("#inicio"))
+    let intentosRestantes = numeroMaxIntentos - numerodeIntentos;
+    if( box.children[1].className === "parrafoNuevo") {
+      box.children[1].remove();
+    }
+    if ( intentosRestantes !== 0 && intentosRestantes < 6) {
+      const parrafoIntentos = document.createElement("p");
+      parrafoIntentos.classList.add("parrafoNuevo")
+      parrafoIntentos.innerHTML = "Te quedan " + intentosRestantes + " intentos."
+      box.insertBefore(parrafoIntentos, document.querySelector("#inicio"))
+    }
+    
     switch (numerodeIntentos) {
       case 1:
         imagen.classList.replace("imagen", "imagen1");
@@ -150,10 +178,12 @@ function comprobarLetra(event) {
         parrafo.textContent = "¡¡Has Perdido!! ¡¡Felipe a muerto!";
         botonComprobar.setAttribute("disabled", true);
         botonComprobar.classList.replace("comprobar", "deshabilitado");
+        comenzar.removeAttribute("disabled");
+        comenzar.classList.replace("deshabilitado","comenzar");
+        comenzar.textContent = "Reiniciar";
         break;
     }
   }
-
   letraInput.value = ""; // Limpiar el campo de entrada de letra
 }
 
