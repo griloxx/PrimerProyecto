@@ -19,7 +19,7 @@ function iniciar (event) {
   if(box.children[0].tagName === parrafo.tagName) {
     box.removeChild(box.children[0]);
   }
-  imagen.classList.replace("imagen6", "imagen");
+  imagen.classList.replace(imagen.classList.item(0), "imagen");
   botonComprobar.removeAttribute("disabled");
   botonComprobar.classList.replace("deshabilitado", "comprobar");
   comenzar.classList.replace("comenzar", "deshabilitado");
