@@ -14,9 +14,9 @@ botonComprobar.classList.replace("comprobar", "deshabilitado");
 let palabra2;
 let guionesBajos;
 comenzar.addEventListener("click", iniciar);
-function iniciar (event) {
+function iniciar(event) {
   event.preventDefault();
-  if(box.children[0].tagName === parrafo.tagName) {
+  if (box.children[0].tagName === parrafo.tagName) {
     box.removeChild(box.children[0]);
   }
   imagen.classList.replace(imagen.classList.item(0), "imagen");
@@ -61,10 +61,9 @@ function devuelveSolucionParcial(letra, palabra, solucionAnterior) {
 
 function aumentoNumeroIntentos() {
   intentos++;
-  if(intentos === 6) {
+  if (intentos === 6) {
     intentos = 0;
   }
-  
 
   return intentos;
 }
@@ -74,22 +73,19 @@ function aumentoNumeroIntentos() {
 function comprobarLetra(event) {
   event.preventDefault(); // Evitar el envío del formulario y la actualización de la página
 
-  
-  if(box.children[0].tagName === parrafo.tagName) {
+  if (box.children[0].tagName === parrafo.tagName) {
     box.removeChild(box.children[0]);
   }
-  
-  
+
   const letraInput = document.getElementById("letra");
   const letra = letraInput.value.toLowerCase(); // Convertir la letra a minúscula
 
   parrafo.classList.add("error");
-  if ( letra.length === 0) {
+  if (letra.length === 0) {
     parrafo.classList.replace("correcto", "error");
     enfocar();
     box.prepend(parrafo);
-    parrafo.textContent =
-      "Debes introducir un carácter mínimo.";
+    parrafo.textContent = "Debes introducir un carácter mínimo.";
     return;
   }
   if (!letra.match(/[a-z]/) && letra.length === 1) {
@@ -98,8 +94,8 @@ function comprobarLetra(event) {
     box.prepend(parrafo);
     parrafo.textContent =
       "El caracter introducido no es una letra. Introduzca una letra.";
-      enfocar();
-      letraInput.value = "";
+    enfocar();
+    letraInput.value = "";
     return;
   }
   if (letra.length > 1) {
@@ -107,19 +103,18 @@ function comprobarLetra(event) {
     parrafo.textContent = "Solo puedes introducir una letra.";
     enfocar();
     letraInput.value = "";
-    return
+    return;
   }
   const palabraAleatoria = palabra2;
   const pGuionesBajos = document.querySelector(".guionesBajos").textContent;
 
-  if (existeLetra(letra, pGuionesBajos)){
+  if (existeLetra(letra, pGuionesBajos)) {
     box.prepend(parrafo);
     parrafo.classList.replace("correcto", "error");
     letraInput.value = "";
     enfocar();
-    parrafo.textContent =
-      "La letra introducida ya a sido usada.";
-      return;
+    parrafo.textContent = "La letra introducida ya a sido usada.";
+    return;
   }
 
   if (existeLetra(letra, palabra2)) {
@@ -134,7 +129,7 @@ function comprobarLetra(event) {
     parrafo.classList.replace("error", "correcto");
     parrafo.textContent =
       "Felicidades, la letra es correcta. Estás más cerca de salvar a Felipe.";
-      enfocar();
+    enfocar();
 
     if (solucionParcial === palabra2) {
       box.prepend(parrafo);
@@ -143,10 +138,10 @@ function comprobarLetra(event) {
       botonComprobar.setAttribute("disabled", true);
       botonComprobar.classList.replace("comprobar", "deshabilitado");
       comenzar.removeAttribute("disabled");
-      comenzar.classList.replace("deshabilitado","comenzar");
+      comenzar.classList.replace("deshabilitado", "comenzar");
       comenzar.textContent = "Reiniciar";
       intentos = 0;
-      if( box.children[1].className === "parrafoNuevo") {
+      if (box.children[1].className === "parrafoNuevo") {
         box.children[1].remove();
       }
     }
@@ -159,16 +154,17 @@ function comprobarLetra(event) {
     let numeroMaxIntentos = 6;
     let numerodeIntentos = aumentoNumeroIntentos();
     let intentosRestantes = numeroMaxIntentos - numerodeIntentos;
-    if( box.children[1].className === "parrafoNuevo") {
+    if (box.children[1].className === "parrafoNuevo") {
       box.children[1].remove();
     }
-    if ( intentosRestantes !== 0 && intentosRestantes < 6) {
+    if (intentosRestantes !== 0 && intentosRestantes < 6) {
       const parrafoIntentos = document.createElement("p");
-      parrafoIntentos.classList.add("parrafoNuevo")
-      parrafoIntentos.innerHTML = "Te quedan " + intentosRestantes + " intentos."
-      box.insertBefore(parrafoIntentos, document.querySelector("#inicio"))
+      parrafoIntentos.classList.add("parrafoNuevo");
+      parrafoIntentos.innerHTML =
+        "¡Te quedan " + intentosRestantes + " intentos.!";
+      box.insertBefore(parrafoIntentos, document.querySelector("#inicio"));
     }
-    
+
     switch (numerodeIntentos) {
       case 1:
         imagen.classList.replace("imagen", "imagen1");
@@ -193,7 +189,7 @@ function comprobarLetra(event) {
         botonComprobar.setAttribute("disabled", true);
         botonComprobar.classList.replace("comprobar", "deshabilitado");
         comenzar.removeAttribute("disabled");
-        comenzar.classList.replace("deshabilitado","comenzar");
+        comenzar.classList.replace("deshabilitado", "comenzar");
         comenzar.textContent = "Reiniciar";
         break;
     }

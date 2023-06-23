@@ -10,6 +10,7 @@ body {
   font-family: "Nunito", sans-serif, Times, serif;
   background-image: URl(/img/imagen-fondo.jpeg);
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-color: transparent;
   height: fit-content;
   background-size: cover;
@@ -82,7 +83,7 @@ main {
   background-image: url(/img/img6.png);
 }
 
-/*color de las casillas*/
+/*color de los textos del formulario*/
 #inicio {
   color: rgb(144, 59, 31);
   text-align: left;
@@ -100,7 +101,7 @@ fieldset {
   border-color: transparent;
   font-size: 1.8em;
 }
-/*agrandar la caja de texto de la letra a introducir*/
+
 #letra {
   font-size: 25px;
 }
@@ -108,6 +109,7 @@ fieldset {
 /*Ajuste color/tamaño botones*/
 .comenzar {
   color: white;
+  font-family: "Nunito", sans-serif, Times, serif;
   background-color: rgb(201, 115, 16);
   font-size: 20px;
   border: none;
@@ -119,6 +121,7 @@ fieldset {
   color: white;
   background: rgb(201, 115, 16);
   font-size: 20px;
+  font-family: "Nunito", sans-serif, Times, serif;
   border: none;
   padding: 0.5% 0.5% 0.5% 0.5%;
   border-radius: 5%;
@@ -128,12 +131,14 @@ fieldset {
   color: white;
   background: grey;
   font-size: 20px;
+  font-family: "Nunito", sans-serif, Times, serif;
+  padding: 5px 10px;
   border: none;
-  padding: 0.5% 0.5% 0.5% 0.5%;
   border-radius: 5%;
 }
 .parrafoNuevo {
   color: rgb(144, 59, 31);
+  font-family: "Nunito", sans-serif, Times, serif;
   font-size: 25px;
   text-align: center;
 }
@@ -146,6 +151,7 @@ fieldset {
 .error {
   color: white;
   background-color: red;
+  font-family: "Nunito", sans-serif, Times, serif;
   padding: 2px 5px;
   font-weight: bold;
   font-size: 20px;
@@ -184,106 +190,114 @@ fieldset {
   margin-left: 0px;
   font-size: 15px;
 }
+.guionesBajos {
+  gap: 9px;
+  margin-bottom: 5px;
+}
 /*PC*/
 @media (max-width: 1440px) {
-  @media (max-width: 768px) {
-    body {
-      display: grid;
-      grid-template-rows: 5rem 40rem 5rem;
-      grid-template-columns: 1fr;
-      grid-template-areas:
-        "header"
-        "main"
-        "footer";
-    }
-    main {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 10px;
-    }
+  body {
+    display: grid;
+    grid-template-rows: 5rem 40rem 5rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
 
-    .box {
-      order: 1;
-      display: flex;
-      flex-direction: column;
-    }
-    legend {
-      text-align: left;
-      min-width: 600px;
-      max-width: 600px;
-      margin-left: 0px;
-    }
-    label {
-      text-align: left;
-      min-width: 600px;
-      max-width: 600px;
-      margin-left: 0px;
-    }
-    .imagen {
-      order: 2;
-      width: 250px;
-      float: none;
-      margin-top: 10px;
-      margin-right: 10px;
-    }
-    h1 {
-      font-size: 30px;
-      padding-bottom: 15px;
-    }
-    h2 {
-      font-size: 20px;
-      padding-top: 0;
-      padding-bottom: 0;
-    }
-    #inicio {
-      font-size: 10px;
-      padding-left: 0;
-      padding-top: 0;
-    }
+  .box {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  legend {
+    text-align: left;
+    min-width: 600px;
+    max-width: 600px;
+    margin-left: 0px;
+  }
+  label {
+    text-align: left;
+    min-width: 600px;
+    max-width: 600px;
+    margin-left: 0px;
+  }
+  .imagen {
+    order: 2;
+    width: 250px;
+    float: none;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  h1 {
+    font-size: 30px;
+    padding-bottom: 15px;
+  }
+  h2 {
+    font-size: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  #inicio {
+    font-size: 10px;
+    padding-left: 0;
+    padding-top: 0;
+  }
 
-    #letras {
-      font-size: 10px;
-      padding-left: 0;
-      padding-top: 0;
-    }
-    .comenzar {
-      margin-top: 5px;
-      margin-bottom: 10px;
-    }
-    #letras fieldset {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    footer {
-      order: 3;
-    }
-    /*color de las casillas*/
-    #inicio {
-      color: rgb(144, 59, 31);
-      text-align: center;
-      margin-top: 20px;
-    }
-    #letras {
-      color: rgb(144, 59, 31);
-      text-align: center;
-    }
-    .parrafoNuevo {
-      font-size: 30px;
-    }
-    .error {
-      margin-top: 10px;
-      margin-left: 10px;
-      margin-right: 0;
-      font-size: 20px;
-    }
-    .correcto {
-      margin-top: 10px;
-      margin-left: 20px;
-      margin-right: 0;
-      font-size: 15px;
-    }
+  #letras {
+    font-size: 10px;
+    padding-left: 0;
+    padding-top: 0;
+  }
+  .comenzar {
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  #letras fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  footer {
+    order: 3;
+  }
+
+  #inicio {
+    color: rgb(144, 59, 31);
+    text-align: center;
+    margin-top: 20px;
+  }
+  #letras {
+    color: rgb(144, 59, 31);
+    text-align: center;
+  }
+  .parrafoNuevo {
+    font-size: 30px;
+  }
+  .error {
+    color: white;
+    background-color: red;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 0;
+    font-size: 30px;
+  }
+  .correcto {
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 0;
+    font-size: 15px;
+  }
+  h2 {
+    font-size: 20px;
+    margin-top: 70px;
   }
 }
 
@@ -313,19 +327,44 @@ fieldset {
     color: rgba(115, 37, 11, 0.664);
   }
   .parrafoNuevo {
-    font-size: 17px;
+    font-size: 25px;
   }
   .error {
     margin-top: 10px;
-    font-size: 15px;
+    font-size: 20px;
     min-width: 700px;
     max-width: 700px;
   }
   .correcto {
-    font-size: 15px;
+    font-size: 20px;
     min-width: 700px;
     max-width: 700px;
     margin-top: 10px;
+  }
+  legend {
+    font-size: 25px;
+    text-align: left;
+    min-width: 550px;
+    max-width: 550px;
+  }
+  label {
+    font-size: 25px;
+    text-align: left;
+    min-width: 550px;
+    max-width: 550px;
+  }
+  h2 {
+    font-size: 30px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .deshabilitado {
+    font-size: 20px;
+    margin-top: 5px;
+    padding: 5px 10px;
+  }
+  .comprobar {
+    display: inline-block;
   }
 }
 
@@ -423,7 +462,7 @@ fieldset {
   footer {
     order: 3;
   }
-  /*color de las casillas*/
+
   #inicio {
     color: rgb(144, 59, 31);
     text-align: center;
@@ -434,7 +473,7 @@ fieldset {
     text-align: center;
   }
   .parrafoNuevo {
-    font-size: 20px;
+    font-size: 27px;
   }
   .error {
     margin-left: 0px;
@@ -597,8 +636,8 @@ fieldset {
   }
   h2 {
     font-size: 20px;
-    padding-top: 0;
-    padding-bottom: 0;
+    margin-top: 15px;
+    margin-bottom: 10px;
   }
   #inicio {
     font-size: 10px;
@@ -641,7 +680,7 @@ fieldset {
 @media (max-width: 325px) {
   body {
     display: grid;
-    grid-template-rows: 5rem 40rem 5rem;
+    grid-template-rows: 5rem 45rem 5rem;
     grid-template-columns: 1fr;
     grid-template-areas:
       "header"
@@ -687,8 +726,9 @@ fieldset {
   h2 {
     font-size: 20px;
     padding-top: 0;
-    padding-bottom: 0;
-    margin-top: 20px;
+    padding-bottom: 7px;
+    margin-top: 5px;
+    background-attachment: fixed;
   }
   #inicio {
     font-size: 10px;
@@ -710,14 +750,16 @@ fieldset {
     order: 3;
   }
   .error {
+    color: white;
+    background-color: red;
     margin-left: 0px;
-    font-size: 15px;
+    font-size: 10px;
     min-width: 250px;
     max-width: 250px;
   }
   .correcto {
     margin-left: 0px;
-    font-size: 15px;
+    font-size: 10px;
     min-width: 250px;
     max-width: 250px;
   }
@@ -747,7 +789,7 @@ fieldset {
   }
   .deshabilitado {
     font-size: 15px;
-    padding: 0.5% 0.5% 0.5% 0.5%;
+    padding: 5px 10px;
   }
   #letra {
     font-size: 18px;
