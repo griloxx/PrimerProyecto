@@ -27,6 +27,7 @@ function iniciar (event) {
   palabra2 = seleccionarPalabraAleatoria();
   guionesBajos = generarGuion(palabra2);
   palabra2 = palabra2.split("").join(" ");
+  enfocar();
   console.log(palabra2);
   añadirGuiones(guionesBajos);
   return palabra2, guionesBajos;
@@ -40,7 +41,10 @@ function existeLetra(letra, palabra) {
 
   return false;
 }
-
+function enfocar() {
+  const enfocar = document.querySelector("input[name = 'letra']");
+  enfocar.focus();
+}
 function devuelveSolucionParcial(letra, palabra, solucionAnterior) {
   let solucionParcial = "";
 
@@ -81,6 +85,8 @@ function comprobarLetra(event) {
 
   parrafo.classList.add("error");
   if ( letra.length === 0) {
+    parrafo.classList.replace("correcto", "error");
+    enfocar();
     box.prepend(parrafo);
     parrafo.textContent =
       "Debes introducir un carácter mínimo.";
@@ -88,16 +94,19 @@ function comprobarLetra(event) {
   }
   if (!letra.match(/[a-z]/) && letra.length === 1) {
     // Si el caracter ingresado no es una letra
-    if (parrafo.classList.contains("error")) {
-    }
+    parrafo.classList.replace("correcto", "error");
     box.prepend(parrafo);
     parrafo.textContent =
       "El caracter introducido no es una letra. Introduzca una letra.";
+      enfocar();
+      letraInput.value = "";
     return;
   }
   if (letra.length > 1) {
     box.prepend(parrafo);
     parrafo.textContent = "Solo puedes introducir una letra.";
+    enfocar();
+    letraInput.value = "";
     return
   }
   const palabraAleatoria = palabra2;
@@ -105,6 +114,9 @@ function comprobarLetra(event) {
 
   if (existeLetra(letra, pGuionesBajos)){
     box.prepend(parrafo);
+    parrafo.classList.replace("correcto", "error");
+    letraInput.value = "";
+    enfocar();
     parrafo.textContent =
       "La letra introducida ya a sido usada.";
       return;
@@ -117,12 +129,12 @@ function comprobarLetra(event) {
       palabra2,
       pGuionesBajos
     );
-console.log(solucionParcial)
     document.querySelector(".guionesBajos").textContent = solucionParcial;
     box.prepend(parrafo);
     parrafo.classList.replace("error", "correcto");
     parrafo.textContent =
       "Felicidades, la letra es correcta. Estás más cerca de salvar a Felipe.";
+      enfocar();
 
     if (solucionParcial === palabra2) {
       box.prepend(parrafo);
@@ -141,7 +153,9 @@ console.log(solucionParcial)
   } else {
     // Si la letra es incorrecta
     box.prepend(parrafo);
+    parrafo.classList.replace("correcto", "error");
     parrafo.textContent = "Error fatal!! La vida de Felipe está en tus manos.";
+    enfocar();
     let numeroMaxIntentos = 6;
     let numerodeIntentos = aumentoNumeroIntentos();
     let intentosRestantes = numeroMaxIntentos - numerodeIntentos;
