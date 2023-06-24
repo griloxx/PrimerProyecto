@@ -50,6 +50,10 @@ main {
   border-color: white;
   background-color: white;
   display: flex;
+  /*Incorporo a aquí lo que he quitado de .box de las queries*/
+  order: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 /*incorporar la imagen del ahorcado*/
@@ -134,6 +138,7 @@ fieldset {
   font-family: "Nunito", sans-serif, Times, serif;
   border: none;
   border-radius: 5%;
+  padding: 5px 10px;
 }
 .parrafoNuevo {
   color: rgb(144, 59, 31);
@@ -184,6 +189,10 @@ fieldset {
   gap: 9px;
   margin-bottom: 10px;
 }
+/*Incorporo aquí el footer*/
+footer {
+  order: 3;
+}
 /*PC*/
 @media (max-width: 1440px) {
   body {
@@ -201,12 +210,7 @@ fieldset {
     align-items: center;
     padding: 10px;
   }
-
-  .box {
-    order: 1;
-    display: flex;
-    flex-direction: column;
-  }
+  /*quito de aquí la parte de .Box*/
   legend {
     font-size: 30px;
     text-align: center;
@@ -254,7 +258,7 @@ fieldset {
     font-size: 35px;
     padding-top: 0;
     padding-bottom: 0;
-    margin-top: 45px;
+    margin-top: 75px;
   }
   #inicio {
     font-size: 20px;
@@ -266,6 +270,7 @@ fieldset {
     font-size: 20px;
     padding-left: 0;
     padding-top: 0;
+    text-align: center;
   }
   .comenzar {
     font-size: 20px;
@@ -281,16 +286,11 @@ fieldset {
     gap: 10px;
     align-items: center;
   }
-  footer {
-    order: 3;
-  }
+  /*quito de aquí footer*/
 
   #inicio {
     text-align: center;
     margin-top: 25px;
-  }
-  #letras {
-    text-align: center;
   }
   .parrafoNuevo {
     font-size: 25px;
@@ -390,11 +390,7 @@ fieldset {
     width: 550px;
   }
 
-  .box {
-    order: 1;
-    display: flex;
-    flex-direction: column;
-  }
+  /*He quitado de aquí la parte de .Box*/
   legend {
     font-size: 20px;
     text-align: center;
@@ -407,13 +403,7 @@ fieldset {
     min-width: 550px;
     max-width: 550px;
   }
-  .imagen {
-    order: 2;
-    width: 250px;
-    float: none;
-    margin-top: 10px;
-  }
-
+  /*quito de aquí imagen está igual en el 1400*/
   h1 {
     font-size: 30px;
     margin-top: 35px;
@@ -434,22 +424,15 @@ fieldset {
     font-size: 10px;
     padding-left: 0;
     padding-top: 0;
+    text-align: center;
   }
-
   .comenzar {
     margin-top: 5px;
     margin-bottom: 10px;
     font-size: 15px;
   }
-  #letras fieldset {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-  }
-  footer {
-    order: 3;
-  }
+  /*quito de aquí #letras fieldset y lo dejo solo en el de mayor tamaño*/
+  /*quito de aquí footer*/
   .error {
     font-size: 15px;
     min-width: 500px;
@@ -465,9 +448,6 @@ fieldset {
   #inicio {
     text-align: center;
     margin-top: 20px;
-  }
-  #letras {
-    text-align: center;
   }
   .parrafoNuevo {
     font-size: 20px;
@@ -502,12 +482,7 @@ fieldset {
     padding: 5px;
     width: 380px;
   }
-
-  .box {
-    order: 1;
-    display: flex;
-    flex-direction: column;
-  }
+  /*quito de aquí la parte de .Box*/
   legend {
     min-width: 350px;
     max-width: 5350px;
@@ -516,11 +491,9 @@ fieldset {
     min-width: 350px;
     max-width: 350px;
   }
+  /* solo dejo en imagen los elementos no repetidos*/
   .imagen {
-    order: 2;
     width: 380px;
-    float: none;
-    margin-top: 10px;
   }
 
   h1 {
@@ -534,9 +507,7 @@ fieldset {
     margin-top: 0;
     margin-bottom: 10px;
   }
-  footer {
-    order: 3;
-  }
+  /*quito de aquí footer*/
   #inicio {
     font-size: 10px;
     padding-left: 0;
@@ -548,19 +519,21 @@ fieldset {
     padding-left: 0;
     padding-top: 0;
   }
-  #letras fieldset {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
+  /*quito de aquí #letras fieldset y lo incorporo en el mayor por columnas*/
 
   .error {
-    font-size: 15px;
+    /*quito de aquí el tamaño de letra que está en el 768*/
+    /*incorporo aquí el margen para los tamaños de mobile (s,m y L)*/
+    margin-left: 0px;
+    margin-right: 0px;
     min-width: 350px;
     max-width: 350px;
   }
   .correcto {
-    font-size: 15px;
+    /*quito de aquí el tamñaño de letra qu está en el 768*/
+    /*incorporo aquí el margen para los tamaños de mobile (s,m y L)*/
+    margin-left: 0px;
+    margin-right: 0px;
     min-width: 350px;
     max-width: 350px;
   }
@@ -587,11 +560,7 @@ fieldset {
     width: 300px;
   }
 
-  .box {
-    order: 1;
-    display: flex;
-    flex-direction: column;
-  }
+  /*quito la parte de .Box*/
   legend {
     min-width: 280px;
     max-width: 280px;
@@ -600,12 +569,7 @@ fieldset {
     min-width: 280px;
     max-width: 280px;
   }
-  .imagen {
-    order: 2;
-    width: 380px;
-    float: none;
-    margin-top: 10px;
-  }
+  /*quito .Imagen ya que etsá definido en el nivel superior*/
 
   h1 {
     font-size: 30px;
@@ -626,22 +590,16 @@ fieldset {
     padding-left: 0;
     padding-top: 0;
   }
-  #letras fieldset {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  footer {
-    order: 3;
-  }
+  /*quito de aquí #letras fieldset, y lo incoporo en el mayor por columnas*/
+  /*quito de aquí footer*/
   .error {
-    font-size: 15px;
+    /*quito de aquí el tamaño de letra que está en el siguiente*/
     margin-top: 10px;
     min-width: 280px;
     max-width: 280px;
   }
   .correcto {
-    font-size: 15px;
+    /*quito de aquí el tamaño de letra que está en el siguiente*/
     margin-top: 10px;
     min-width: 280px;
     max-width: 280px;
@@ -652,26 +610,15 @@ fieldset {
 }
 /*Mobile S*/ /*¡¡¡este se muestra bien !!!*/ /*Revisado-ok*/
 @media (max-width: 325px) {
-  body {
-    display: grid;
-    grid-template-rows: 5rem 45rem 5rem;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "header"
-      "main"
-      "footer";
-  }
+  /*Esto se tiene que quedar, porque es diferente en el resto de queries*/
   main {
     display: flex;
     flex-direction: column;
     align-items: left;
     width: 280px;
   }
-
+  /*He hecho una limpia está en ....*/
   .box {
-    order: 1;
-    display: flex;
-    flex-direction: column;
     font-size: 5 px;
   }
   legend {
@@ -702,16 +649,9 @@ fieldset {
     padding-left: 0;
     padding-top: 0;
   }
-  #letras fieldset {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  footer {
-    order: 3;
-  }
+  /*quito de aquí el #letras fieldset, lo incorporo en el mayor por columnas*/
+  /*quito de aquí footer 3*/
   .error {
-    margin-left: 0px;
     min-width: 250px;
     max-width: 250px;
   }
@@ -719,23 +659,12 @@ fieldset {
     min-width: 250px;
     max-width: 250px;
   }
-  /*color de las casillas*/
-  .palabraAleatoria {
-    padding: 2px;
-    align-items: left;
-  }
+  /*quito de aquí palanra aleatoria porque está en el principal*/
+
   .tamaño {
     width: 250px;
   }
-  .comenzar {
-    font-size: 15px;
-  }
-  .comprobar {
-    font-size: 15px;
-  }
-  .deshabilitado {
-    font-size: 15px;
-  }
+  /*quito de aquí el tamaño de letra de comenzar comprobar y deshabilitado ya que es el mismo desde el 768*/
   #letra {
     font-size: 15px;
   }

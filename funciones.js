@@ -185,7 +185,7 @@ function comprobarLetra(event) {
       default:
         imagen.classList.replace("imagen5", "imagen6");
         box.prepend(parrafo);
-        parrafo.textContent = "¡¡Has Perdido!! ¡¡Felipe a muerto!";
+        parrafo.textContent = "¡¡Has Perdido!! ¡¡Felipe a muerto!!";
         botonComprobar.setAttribute("disabled", true);
         botonComprobar.classList.replace("comprobar", "deshabilitado");
         comenzar.removeAttribute("disabled");
