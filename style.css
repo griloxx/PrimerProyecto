@@ -34,6 +34,7 @@ h2 {
 /*alinear los textos del div con respecto a la imagen del ahorcado*/
 main {
   display: flex;
+  justify-content: center;
   width: 80%;
   margin: auto;
   padding: 20px;
@@ -308,7 +309,7 @@ fieldset {
   }
   h2 {
     font-size: 20px;
-    margin-top: 70px;
+    margin-top: 90px;
   }
   .fieldset {
     display: flex;
