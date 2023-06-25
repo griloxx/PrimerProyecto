@@ -175,9 +175,11 @@ fieldset {
 .guionesBajos {
   gap: 9px;
   margin-bottom: 10px;
+
 }
 footer {
   order: 3;
+
 }
 /*PC*/
 @media (max-width: 1440px) {
@@ -271,6 +273,10 @@ footer {
     align-items: center;
   }
   #inicio {
+    text-align: center;
+    margin-top: 25px;
+  }
+  #letras {
     text-align: center;
     margin-top: 25px;
   }
@@ -409,6 +415,7 @@ footer {
     margin-bottom: 10px;
     font-size: 15px;
   }
+
   .error {
     font-size: 15px;
     min-width: 500px;
@@ -425,6 +432,7 @@ footer {
     text-align: center;
     margin-top: 20px;
   }
+
   .parrafoNuevo {
     font-size: 20px;
   }
@@ -478,6 +486,7 @@ footer {
     padding-bottom: 0;
     margin-top: 0;
     margin-bottom: 10px;
+
   }
   #inicio {
     font-size: 10px;
@@ -492,12 +501,14 @@ footer {
   .error {
     margin-left: 0px;
     margin-right: 0px;
+
     min-width: 350px;
     max-width: 350px;
   }
   .correcto {
     margin-left: 0px;
     margin-right: 0px;
+
     min-width: 350px;
     max-width: 350px;
   }
@@ -555,6 +566,7 @@ footer {
     max-width: 280px;
   }
   .correcto {
+
     margin-top: 10px;
     min-width: 280px;
     max-width: 280px;
@@ -603,6 +615,7 @@ footer {
     padding-top: 0;
   }
   .error {
+
     min-width: 250px;
     max-width: 250px;
   }
@@ -610,6 +623,7 @@ footer {
     min-width: 250px;
     max-width: 250px;
   }
+
   .tamaño {
     width: 250px;
   }
