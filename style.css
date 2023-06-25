@@ -1,9 +1,11 @@
-/*OptimizaciÃ³n cÃ³digo*/
+/*hacer limpieza del documento*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/*separación del cuerpo de la pÃ¡gina del margen y su formato*/
 body {
   font-family: "Nunito", sans-serif, Times, serif;
   background-image: URl(/img/imagen-fondo.jpeg);
@@ -13,6 +15,8 @@ body {
   height: fit-content;
   background-size: cover;
 }
+
+/*color tí­tulo del juego*/
 h1 {
   color: rgb(144, 59, 31);
   font-size: 60px;
@@ -27,6 +31,7 @@ h2 {
   padding-top: 80px;
   padding-bottom: 120px;
 }
+/*alinear los textos del div con respecto a la imagen del ahorcado*/
 main {
   display: flex;
   width: 80%;
@@ -35,6 +40,7 @@ main {
   background: rgba(247, 205, 52, 0.6);
   text-align: left;
 }
+/* Caja que contiene el formulario y la imagen del ahorcado*/
 .box {
   border: 1px solid;
   top: 10px;
@@ -44,12 +50,10 @@ main {
   border-color: white;
   background-color: white;
   display: flex;
-  order: 1;
-  display: flex;
-  flex-direction: column;
 }
 
-.tamaÃ±o {
+/*incorporar la imagen del ahorcado*/
+.tamaño {
   position: relative;
   width: 270px;
   height: 290px;
@@ -79,6 +83,7 @@ main {
   background-image: url(/img/img6.png);
 }
 
+/*color de los textos del formulario*/
 #inicio {
   color: rgb(144, 59, 31);
   text-align: left;
@@ -91,6 +96,7 @@ main {
   padding-left: 25px;
   padding-top: 30px;
 }
+/*caja donde se introduce la letra a comprobar*/
 fieldset {
   border-color: transparent;
   font-size: 1.8em;
@@ -99,6 +105,8 @@ fieldset {
 #letra {
   font-size: 25px;
 }
+
+/*Ajuste color/tamaño botones*/
 .comenzar {
   color: white;
   font-family: "Nunito", sans-serif, Times, serif;
@@ -115,7 +123,7 @@ fieldset {
   font-size: 20px;
   font-family: "Nunito", sans-serif, Times, serif;
   border: none;
-  padding: 5px 10x;
+  padding: 0.5% 0.5% 0.5% 0.5%;
   border-radius: 5%;
   cursor: pointer;
 }
@@ -124,9 +132,9 @@ fieldset {
   background: grey;
   font-size: 20px;
   font-family: "Nunito", sans-serif, Times, serif;
+  padding: 5px 10px;
   border: none;
   border-radius: 5%;
-  padding: 5px 10px;
 }
 .parrafoNuevo {
   color: rgb(144, 59, 31);
@@ -134,10 +142,11 @@ fieldset {
   font-size: 30px;
   text-align: center;
 }
+
 .palabraAleatoria {
+  margin: 20px;
   padding: 2px;
   align-items: left;
-  margin: 10px 10px 0px;
 }
 .error {
   color: white;
@@ -146,7 +155,7 @@ fieldset {
   padding: 2px 5px;
   font-weight: bold;
   font-size: 20px;
-  margin-left: 10px;
+  margin-left: 100px;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -156,11 +165,12 @@ fieldset {
   padding: 2px 5px;
   font-weight: bold;
   font-size: 20px;
-  margin-left: 10px;
+  margin-left: 100px;
   margin-bottom: 20px;
   text-align: center;
 }
 
+/*color de las casillas*/
 #inicio {
   color: rgb(144, 59, 31);
   text-align: center;
@@ -174,10 +184,7 @@ fieldset {
 }
 .guionesBajos {
   gap: 9px;
-  margin-bottom: 10px;
-}
-footer {
-  order: 3;
+  margin-bottom: 5px;
 }
 /*PC*/
 @media (max-width: 1440px) {
@@ -196,15 +203,19 @@ footer {
     align-items: center;
     padding: 10px;
   }
+
+  .box {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+  }
   legend {
-    font-size: 30px;
     text-align: center;
     min-width: 600px;
     max-width: 600px;
     margin-left: 0px;
   }
   label {
-    font-size: 30px;
     text-align: center;
     min-width: 600px;
     max-width: 600px;
@@ -236,33 +247,28 @@ footer {
     order: 2;
   }
   h1 {
-    font-size: 35px;
+    font-size: 30px;
     padding-bottom: 15px;
   }
   h2 {
-    font-size: 35px;
+    font-size: 20px;
     padding-top: 0;
     padding-bottom: 0;
-    margin-top: 75px;
   }
   #inicio {
-    font-size: 20px;
+    font-size: 10px;
     padding-left: 0;
     padding-top: 0;
   }
+
   #letras {
-    font-size: 20px;
+    font-size: 10px;
     padding-left: 0;
     padding-top: 0;
-    text-align: center;
   }
   .comenzar {
-    font-size: 20px;
     margin-top: 5px;
     margin-bottom: 10px;
-  }
-  .deshabilitado {
-    font-size: 20px;
   }
   #letras fieldset {
     display: flex;
@@ -270,20 +276,39 @@ footer {
     gap: 10px;
     align-items: center;
   }
+  footer {
+    order: 3;
+  }
+
   #inicio {
+    color: rgb(144, 59, 31);
     text-align: center;
-    margin-top: 25px;
+    margin-top: 20px;
+  }
+  #letras {
+    color: rgb(144, 59, 31);
+    text-align: center;
   }
   .parrafoNuevo {
-    font-size: 25px;
+    font-size: 30px;
   }
   .error {
-    margin: 10px 10px;
-    font-size: 27px;
+    color: white;
+    background-color: red;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 0;
+    font-size: 30px;
   }
   .correcto {
-    margin: 10px 10px;
-    font-size: 27px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 0;
+    font-size: 15px;
+  }
+  h2 {
+    font-size: 20px;
+    margin-top: 70px;
   }
   .fieldset {
     display: flex;
@@ -291,7 +316,6 @@ footer {
     align-items: center;
   }
   .comprobar {
-    font-size: 20px;
     width: fit-content;
   }
 }
@@ -315,18 +339,26 @@ footer {
     height: auto;
     width: 800px;
   }
+  #inicio {
+    color: rgba(115, 37, 11, 0.664);
+  }
+  #letras {
+    color: rgba(115, 37, 11, 0.664);
+  }
   .parrafoNuevo {
     font-size: 25px;
   }
   .error {
+    margin-top: 10px;
     font-size: 20px;
-    min-width: 650px;
-    max-width: 650px;
+    min-width: 700px;
+    max-width: 700px;
   }
   .correcto {
     font-size: 20px;
-    min-width: 650px;
-    max-width: 650px;
+    min-width: 700px;
+    max-width: 700px;
+    margin-top: 10px;
   }
   legend {
     font-size: 25px;
@@ -339,6 +371,7 @@ footer {
     max-width: 550px;
   }
   h2 {
+    font-size: 30px;
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -349,11 +382,10 @@ footer {
   }
   .comprobar {
     display: inline-block;
-    padding: 5px 10px;
   }
 }
 
-/*Tablet*/
+/*Tablet*/ /*Mobile L*/ /*Este está ok*/
 @media (max-width: 768px) {
   body {
     display: grid;
@@ -371,18 +403,29 @@ footer {
     padding: 10px;
     width: 550px;
   }
+
+  .box {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+  }
   legend {
-    font-size: 20px;
     text-align: center;
     min-width: 550px;
     max-width: 550px;
   }
   label {
-    font-size: 20px;
     text-align: center;
     min-width: 550px;
     max-width: 550px;
   }
+  .imagen {
+    order: 2;
+    width: 250px;
+    float: none;
+    margin-top: 10px;
+  }
+
   h1 {
     font-size: 30px;
     margin-top: 35px;
@@ -398,39 +441,56 @@ footer {
     padding-left: 0;
     padding-top: 0;
   }
+
   #letras {
     font-size: 10px;
     padding-left: 0;
     padding-top: 0;
-    text-align: center;
   }
+
   .comenzar {
     margin-top: 5px;
     margin-bottom: 10px;
     font-size: 15px;
   }
-  .error {
-    font-size: 15px;
-    min-width: 500px;
-    max-width: 500px;
-    margin-left: 25px;
+  #letras fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
   }
-  .correcto {
-    font-size: 15px;
-    min-width: 500px;
-    max-width: 500px;
-    margin-left: 25px;
+  footer {
+    order: 3;
   }
+
   #inicio {
+    color: rgb(144, 59, 31);
     text-align: center;
     margin-top: 20px;
   }
+  #letras {
+    color: rgb(144, 59, 31);
+    text-align: center;
+  }
   .parrafoNuevo {
-    font-size: 20px;
+    font-size: 27px;
+  }
+  .error {
+    margin-left: 0px;
+    font-size: 15px;
+    min-width: 500px;
+    max-width: 500px;
+  }
+  .correcto {
+    margin-left: 0px;
+    font-size: 15px;
+    min-width: 500px;
+    max-width: 500px;
   }
   .deshabilitado {
     font-size: 15px;
     margin-top: 5px;
+    padding: 5px 10px;
   }
   #letra {
     font-size: 15px;
@@ -440,7 +500,7 @@ footer {
     font-size: 15px;
   }
 }
-/*Mobile L*/
+/*Mobile L*/ /*Este está ok*/
 @media (max-width: 425px) {
   body {
     display: grid;
@@ -458,6 +518,12 @@ footer {
     padding: 5px;
     width: 380px;
   }
+
+  .box {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+  }
   legend {
     min-width: 350px;
     max-width: 5350px;
@@ -467,45 +533,59 @@ footer {
     max-width: 350px;
   }
   .imagen {
+    order: 2;
     width: 380px;
+    float: none;
+    margin-top: 10px;
   }
+
   h1 {
     font-size: 30px;
   }
+
   h2 {
     font-size: 20px;
     padding-top: 0;
     padding-bottom: 0;
-    margin-top: 0;
-    margin-bottom: 10px;
   }
   #inicio {
     font-size: 10px;
     padding-left: 0;
     padding-top: 0;
   }
+
   #letras {
     font-size: 10px;
     padding-left: 0;
     padding-top: 0;
   }
+  #letras fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  footer {
+    order: 3;
+  }
   .error {
     margin-left: 0px;
-    margin-right: 0px;
+    font-size: 15px;
+    margin-top: 10px;
     min-width: 350px;
     max-width: 350px;
   }
   .correcto {
     margin-left: 0px;
-    margin-right: 0px;
+    font-size: 15px;
+    margin-top: 10px;
     min-width: 350px;
     max-width: 350px;
   }
-  .tamaÃ±o {
+  .tamaño {
     width: 250px;
   }
 }
-/*Mobile M*/
+/*Mobile M*/ /* /*¡¡¡este se muestra bien !!!*/ /*Revisado-ok*/
 @media (max-width: 375px) {
   body {
     display: grid;
@@ -523,6 +603,12 @@ footer {
     padding: 10px;
     width: 300px;
   }
+
+  .box {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+  }
   legend {
     min-width: 280px;
     max-width: 280px;
@@ -531,6 +617,13 @@ footer {
     min-width: 280px;
     max-width: 280px;
   }
+  .imagen {
+    order: 2;
+    width: 380px;
+    float: none;
+    margin-top: 10px;
+  }
+
   h1 {
     font-size: 30px;
     padding-bottom: 15px;
@@ -538,40 +631,68 @@ footer {
   h2 {
     font-size: 20px;
     margin-top: 15px;
+    margin-bottom: 10px;
   }
   #inicio {
     font-size: 10px;
     padding-left: 0;
     padding-top: 0;
   }
+
   #letras {
     font-size: 10px;
     padding-left: 0;
     padding-top: 0;
   }
+  #letras fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  footer {
+    order: 3;
+  }
   .error {
+    margin-left: 0px;
+    font-size: 15px;
     margin-top: 10px;
     min-width: 280px;
     max-width: 280px;
   }
   .correcto {
+    margin-left: 0px;
+    font-size: 15px;
     margin-top: 10px;
     min-width: 280px;
     max-width: 280px;
   }
-  .tamaÃ±o {
+  .tamaño {
     width: 250px;
   }
 }
-/*Mobile S*/
+/*Mobile S*/ /*¡¡¡este se muestra bien !!!*/ /*Revisado-ok*/
 @media (max-width: 325px) {
+  body {
+    display: grid;
+    grid-template-rows: 5rem 45rem 5rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
   main {
     display: flex;
     flex-direction: column;
     align-items: left;
     width: 280px;
   }
+
   .box {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+
     font-size: 5 px;
   }
   legend {
@@ -591,6 +712,17 @@ footer {
     margin-bottom: 5px;
   }
 
+  h1 {
+    font-size: 30px;
+    padding-bottom: 10px;
+  }
+  h2 {
+    font-size: 20px;
+    padding-top: 0;
+    padding-bottom: 7px;
+    margin-top: 5px;
+    background-attachment: fixed;
+  }
   #inicio {
     font-size: 10px;
     padding-left: 0;
@@ -602,19 +734,56 @@ footer {
     padding-left: 0;
     padding-top: 0;
   }
+  #letras fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  footer {
+    order: 3;
+  }
   .error {
+    color: white;
+    background-color: red;
+    margin-left: 0px;
+    font-size: 10px;
     min-width: 250px;
     max-width: 250px;
   }
   .correcto {
+    margin-left: 0px;
+    font-size: 10px;
     min-width: 250px;
     max-width: 250px;
   }
-  /**/
-  .tamaÃ±o {
+  /*color de las casillas*/
+  #inicio {
+    color: rgb(144, 59, 31);
+  }
+  #letras {
+    color: rgb(144, 59, 31);
+  }
+  .parrafoNuevo {
+    font-size: 17px;
+  }
+  .palabraAleatoria {
+    margin: 20px;
+    padding: 2px;
+    align-items: left;
+  }
+  .tamaño {
     width: 250px;
   }
-  #letra {
+  .comenzar {
     font-size: 15px;
+  }
+  .comprobar {
+    font-size: 15px;
+  }
+  .deshabilitado {
+    font-size: 15px;
+  }
+  #letra {
+    font-size: 18px;
   }
 }
