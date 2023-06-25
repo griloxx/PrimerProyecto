@@ -2,7 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
 }
 
 /*separación del cuerpo de la pÃ¡gina del margen y su formato*/
@@ -123,7 +123,7 @@ fieldset {
   font-size: 20px;
   font-family: "Nunito", sans-serif, Times, serif;
   border: none;
-  padding: 0.5% 0.5% 0.5% 0.5%;
+  padding: 5px 10px;
   border-radius: 5%;
   cursor: pointer;
 }
@@ -296,14 +296,14 @@ fieldset {
     color: white;
     background-color: red;
     margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 0;
+    margin-left: 20px;
+    margin-right: 20px;
     font-size: 30px;
   }
   .correcto {
     margin-top: 10px;
     margin-left: 20px;
-    margin-right: 0;
+    margin-right: 20px;
     font-size: 15px;
   }
   h2 {
@@ -476,13 +476,13 @@ fieldset {
     font-size: 27px;
   }
   .error {
-    margin-left: 0px;
+    /*margin-left: 10px;*/
     font-size: 15px;
     min-width: 500px;
     max-width: 500px;
   }
   .correcto {
-    margin-left: 0px;
+    /*margin-left: 10px;*/
     font-size: 15px;
     min-width: 500px;
     max-width: 500px;
@@ -568,16 +568,16 @@ fieldset {
     order: 3;
   }
   .error {
-    margin-left: 0px;
+    /*margin-left: 10px;*/
     font-size: 15px;
-    margin-top: 10px;
+    /*margin-top: 10px;*/
     min-width: 350px;
     max-width: 350px;
   }
   .correcto {
-    margin-left: 0px;
+    /*margin-left: 10px;*/
     font-size: 15px;
-    margin-top: 10px;
+    /*margin-top: 10px;*/
     min-width: 350px;
     max-width: 350px;
   }
@@ -653,16 +653,16 @@ fieldset {
     order: 3;
   }
   .error {
-    margin-left: 0px;
+    /*margin-left: 10px;*/
     font-size: 15px;
-    margin-top: 10px;
+    /*margin-top: 10px;*/
     min-width: 280px;
     max-width: 280px;
   }
   .correcto {
-    margin-left: 0px;
+    /*margin-left: 10px;*/
     font-size: 15px;
-    margin-top: 10px;
+    /*margin-top: 10px;*/
     min-width: 280px;
     max-width: 280px;
   }
@@ -745,13 +745,13 @@ fieldset {
   .error {
     color: white;
     background-color: red;
-    margin-left: 0px;
+    /*margin-left: 10px;*/
     font-size: 10px;
     min-width: 250px;
     max-width: 250px;
   }
   .correcto {
-    margin-left: 0px;
+    /*margin-left: 10px;*/
     font-size: 10px;
     min-width: 250px;
     max-width: 250px;
