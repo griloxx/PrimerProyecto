@@ -1,11 +1,9 @@
-/*hacer limpieza del documento*/
+/*Optimización código*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-/*separación del cuerpo de la pÃ¡gina del margen y su formato*/
 body {
   font-family: "Nunito", sans-serif, Times, serif;
   background-image: URl(/img/imagen-fondo.jpeg);
@@ -15,8 +13,6 @@ body {
   height: fit-content;
   background-size: cover;
 }
-
-/*color tí­tulo del juego*/
 h1 {
   color: rgb(144, 59, 31);
   font-size: 60px;
@@ -31,7 +27,6 @@ h2 {
   padding-top: 80px;
   padding-bottom: 120px;
 }
-/*alinear los textos del div con respecto a la imagen del ahorcado*/
 main {
   display: flex;
   width: 80%;
@@ -40,7 +35,6 @@ main {
   background: rgba(247, 205, 52, 0.6);
   text-align: left;
 }
-/* Caja que contiene el formulario y la imagen del ahorcado*/
 .box {
   border: 1px solid;
   top: 10px;
@@ -50,13 +44,11 @@ main {
   border-color: white;
   background-color: white;
   display: flex;
-  /*Incorporo a aquí lo que he quitado de .box de las queries*/
   order: 1;
   display: flex;
   flex-direction: column;
 }
 
-/*incorporar la imagen del ahorcado*/
 .tamaño {
   position: relative;
   width: 270px;
@@ -87,7 +79,6 @@ main {
   background-image: url(/img/img6.png);
 }
 
-/*color de los textos del formulario*/
 #inicio {
   color: rgb(144, 59, 31);
   text-align: left;
@@ -100,7 +91,6 @@ main {
   padding-left: 25px;
   padding-top: 30px;
 }
-/*caja donde se introduce la letra a comprobar*/
 fieldset {
   border-color: transparent;
   font-size: 1.8em;
@@ -109,8 +99,6 @@ fieldset {
 #letra {
   font-size: 25px;
 }
-
-/*Ajuste color/tamaño botones*/
 .comenzar {
   color: white;
   font-family: "Nunito", sans-serif, Times, serif;
@@ -173,7 +161,6 @@ fieldset {
   text-align: center;
 }
 
-/*color de las casillas*/
 #inicio {
   color: rgb(144, 59, 31);
   text-align: center;
@@ -189,7 +176,6 @@ fieldset {
   gap: 9px;
   margin-bottom: 10px;
 }
-/*Incorporo aquí el footer*/
 footer {
   order: 3;
 }
@@ -210,7 +196,6 @@ footer {
     align-items: center;
     padding: 10px;
   }
-  /*quito de aquí la parte de .Box*/
   legend {
     font-size: 30px;
     text-align: center;
@@ -265,7 +250,6 @@ footer {
     padding-left: 0;
     padding-top: 0;
   }
-
   #letras {
     font-size: 20px;
     padding-left: 0;
@@ -286,8 +270,6 @@ footer {
     gap: 10px;
     align-items: center;
   }
-  /*quito de aquí footer*/
-
   #inicio {
     text-align: center;
     margin-top: 25px;
@@ -371,7 +353,7 @@ footer {
   }
 }
 
-/*Tablet*/ /*Mobile L*/ /*Este está ok*/
+/*Tablet*/
 @media (max-width: 768px) {
   body {
     display: grid;
@@ -389,8 +371,6 @@ footer {
     padding: 10px;
     width: 550px;
   }
-
-  /*He quitado de aquí la parte de .Box*/
   legend {
     font-size: 20px;
     text-align: center;
@@ -403,7 +383,6 @@ footer {
     min-width: 550px;
     max-width: 550px;
   }
-  /*quito de aquí imagen está igual en el 1400*/
   h1 {
     font-size: 30px;
     margin-top: 35px;
@@ -419,7 +398,6 @@ footer {
     padding-left: 0;
     padding-top: 0;
   }
-
   #letras {
     font-size: 10px;
     padding-left: 0;
@@ -431,8 +409,6 @@ footer {
     margin-bottom: 10px;
     font-size: 15px;
   }
-  /*quito de aquí #letras fieldset y lo dejo solo en el de mayor tamaño*/
-  /*quito de aquí footer*/
   .error {
     font-size: 15px;
     min-width: 500px;
@@ -464,7 +440,7 @@ footer {
     font-size: 15px;
   }
 }
-/*Mobile L*/ /*Este está ok*/
+/*Mobile L*/
 @media (max-width: 425px) {
   body {
     display: grid;
@@ -482,7 +458,6 @@ footer {
     padding: 5px;
     width: 380px;
   }
-  /*quito de aquí la parte de .Box*/
   legend {
     min-width: 350px;
     max-width: 5350px;
@@ -491,15 +466,12 @@ footer {
     min-width: 350px;
     max-width: 350px;
   }
-  /* solo dejo en imagen los elementos no repetidos*/
   .imagen {
     width: 380px;
   }
-
   h1 {
     font-size: 30px;
   }
-
   h2 {
     font-size: 20px;
     padding-top: 0;
@@ -507,31 +479,23 @@ footer {
     margin-top: 0;
     margin-bottom: 10px;
   }
-  /*quito de aquí footer*/
   #inicio {
     font-size: 10px;
     padding-left: 0;
     padding-top: 0;
   }
-
   #letras {
     font-size: 10px;
     padding-left: 0;
     padding-top: 0;
   }
-  /*quito de aquí #letras fieldset y lo incorporo en el mayor por columnas*/
-
   .error {
-    /*quito de aquí el tamaño de letra que está en el 768*/
-    /*incorporo aquí el margen para los tamaños de mobile (s,m y L)*/
     margin-left: 0px;
     margin-right: 0px;
     min-width: 350px;
     max-width: 350px;
   }
   .correcto {
-    /*quito de aquí el tamñaño de letra qu está en el 768*/
-    /*incorporo aquí el margen para los tamaños de mobile (s,m y L)*/
     margin-left: 0px;
     margin-right: 0px;
     min-width: 350px;
@@ -541,7 +505,7 @@ footer {
     width: 250px;
   }
 }
-/*Mobile M*/ /* /*¡¡¡este se muestra bien !!!*/ /*Revisado-ok*/
+/*Mobile M*/
 @media (max-width: 375px) {
   body {
     display: grid;
@@ -559,8 +523,6 @@ footer {
     padding: 10px;
     width: 300px;
   }
-
-  /*quito la parte de .Box*/
   legend {
     min-width: 280px;
     max-width: 280px;
@@ -569,8 +531,6 @@ footer {
     min-width: 280px;
     max-width: 280px;
   }
-  /*quito .Imagen ya que etsá definido en el nivel superior*/
-
   h1 {
     font-size: 30px;
     padding-bottom: 15px;
@@ -584,22 +544,17 @@ footer {
     padding-left: 0;
     padding-top: 0;
   }
-
   #letras {
     font-size: 10px;
     padding-left: 0;
     padding-top: 0;
   }
-  /*quito de aquí #letras fieldset, y lo incoporo en el mayor por columnas*/
-  /*quito de aquí footer*/
   .error {
-    /*quito de aquí el tamaño de letra que está en el siguiente*/
     margin-top: 10px;
     min-width: 280px;
     max-width: 280px;
   }
   .correcto {
-    /*quito de aquí el tamaño de letra que está en el siguiente*/
     margin-top: 10px;
     min-width: 280px;
     max-width: 280px;
@@ -608,16 +563,14 @@ footer {
     width: 250px;
   }
 }
-/*Mobile S*/ /*¡¡¡este se muestra bien !!!*/ /*Revisado-ok*/
+/*Mobile S*/
 @media (max-width: 325px) {
-  /*Esto se tiene que quedar, porque es diferente en el resto de queries*/
   main {
     display: flex;
     flex-direction: column;
     align-items: left;
     width: 280px;
   }
-  /*He hecho una limpia está en ....*/
   .box {
     font-size: 5 px;
   }
@@ -649,8 +602,6 @@ footer {
     padding-left: 0;
     padding-top: 0;
   }
-  /*quito de aquí el #letras fieldset, lo incorporo en el mayor por columnas*/
-  /*quito de aquí footer 3*/
   .error {
     min-width: 250px;
     max-width: 250px;
@@ -659,12 +610,9 @@ footer {
     min-width: 250px;
     max-width: 250px;
   }
-  /*quito de aquí palanra aleatoria porque está en el principal*/
-
   .tamaño {
     width: 250px;
   }
-  /*quito de aquí el tamaño de letra de comenzar comprobar y deshabilitado ya que es el mismo desde el 768*/
   #letra {
     font-size: 15px;
   }
