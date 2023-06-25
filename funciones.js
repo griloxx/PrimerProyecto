@@ -11,6 +11,7 @@ let box = document.querySelector(".Box");
 let parrafo = document.createElement("p");
 botonComprobar.setAttribute("disabled", true);
 botonComprobar.classList.replace("comprobar", "deshabilitado");
+
 let palabra2;
 let guionesBajos;
 comenzar.addEventListener("click", iniciar);

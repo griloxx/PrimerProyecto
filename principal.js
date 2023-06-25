@@ -46,6 +46,7 @@ let words = [
 export function seleccionarPalabraAleatoria() {
   const palabraAleatoria = Math.floor(Math.random() * (words.length + 1));
   let palabra = words[palabraAleatoria];
+  
   return palabra;
 }
 

@@ -14,6 +14,7 @@ let i = 0;
 const modal = document.querySelector('.modal');
 const boton = document.querySelector('.seguir');
 
+
 function ocultarIntro() {
     boton.addEventListener('click', () => {
         modal.classList.add('hidden')
